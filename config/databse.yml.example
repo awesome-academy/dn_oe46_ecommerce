@@ -1,0 +1,11 @@
+default:
+  adapter:
+  encoding:
+  pool:
+  username:
+  password:
+  socket:
+
+development:
+  <<:
+  database:

@@ -4,7 +4,7 @@ class StaticPagesController < ApplicationController
   before_action :find_categories, only: [:home, :search, :sort]
 
   def home
-    @products = Product.sort_desc_by_create_time
+    @products = Product.active.sort_desc_by_create_time
                        .page(params[:page]).per(Settings.product.per_page)
     @list_trend_product = OrderItem.get_trending_product
   end
@@ -20,15 +20,15 @@ class StaticPagesController < ApplicationController
   end
 
   def search
-    @products = Product.search_by_name(params[:search]).page(params[:page])
-                       .per(Settings.product.per_page)
+    @products = Product.active.search_by_name(params[:search])
+                       .page(params[:page]).per(Settings.product.per_page)
     render "static_pages/home"
   end
 
   private
 
   def get_list_product
-    @list_old_product = Product.list_by_ids(params[:list_product_id])
+    @list_old_product = Product.active.list_by_ids(params[:list_product_id])
   end
 
   def list_product sort_type

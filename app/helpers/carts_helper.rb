@@ -11,7 +11,7 @@ module CartsHelper
     cart_items = []
     current_cart.each do |line_item|
       product = Product.find_by(id: line_item["product_id"])
-      if product
+      if product&.is_active?
         cart_items << {product: product, quantity: line_item["quantity"]}
       else
         current_cart.delete(line_item)

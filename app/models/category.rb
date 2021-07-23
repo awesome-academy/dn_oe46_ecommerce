@@ -7,6 +7,7 @@ class Category < ApplicationRecord
   validates :name, presence: true,
                    length: {maximum: Settings.validate.normal_length}
   scope :parents, ->{where parent_id: nil}
+  scope :childrens, ->{where.not parent_id: nil}
 
   def descendants
     childrens | childrens.map(&:descendants).flatten

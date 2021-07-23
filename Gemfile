@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem "active_storage_validations", "0.8.2"
 ruby "2.7.0"
 gem "config"
 gem "kaminari"

@@ -1,0 +1,53 @@
+
+<div class="container f_create_product">
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%= t "form.create_product" %></h3>
+    </div>
+    <div class="panel-body">
+      <%= form_with model: [:admin, @product], class: "form-horizontal" do |f| %>
+        <%= render "shared/error_messages", object: f.object %>
+        <div class="form-group">
+          <%= f.label :name, class: "col-sm-3 control-label" %>
+          <div class="col-sm-9">
+            <%= f.text_field :name, class: "form-control cre_product", placeholder: t("form.place_product") %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :description, class: "col-sm-3 control-label" %>
+          <div class="col-sm-9">
+            <%= f.text_area :description, class: "form-control cre_product", placeholder: t("form.place_des") %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :quantity, class: "col-sm-3 control-label" %>
+          <div class="col-sm-3">
+            <%= f.text_field :quantity, class: "form-control", placeholder: t("form.place_quantity") %>
+          </div>
+          <%= f.label :price, class: "col-sm-3 control-label price" %>
+          <div class="col-sm-3">
+            <%= f.text_field :price, class: "form-control", placeholder: t("form.place_price") %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :category_id, class: "col-sm-3 control-label" %>
+          <div class="col-sm-3">
+            <%= f.select :category_id, Category.childrens.pluck(:name, :id), {}, class: "form-control"%>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :images, class: "col-sm-3 control-label" %>
+          <div class="col-sm-3">
+            <%= f.file_field :images, multiple: true %>
+          </div>
+        </div>
+        <hr>
+        <div class="form-group">
+          <div class="col-sm-offset-3 col-sm-9">
+            <%= f.submit t("form.submit"), class: "btn btn-primary" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </section>
+</div>

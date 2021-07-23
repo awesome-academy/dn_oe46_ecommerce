@@ -38,6 +38,7 @@ Rails.application.routes.draw do
           get :show
         end
       end
+      resources :products, except: [:show]
     end
   end
 end

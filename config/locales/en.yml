@@ -10,6 +10,8 @@ en:
     add_success: "The product has been added to cart"
     update_quantity: "The product has been updated to the quantity in the cart"
   product:
+    price_from: "Price from "
+    price_to: "Price to "
     invalid_order_item_size: "Order items can't be empty"
     create_success: "Create product success"
     update_success: "Update product success"
@@ -149,6 +151,8 @@ en:
     second_title: "Free shipping On all orders"
     third_title: "baoruby@example.com"
   form:
+    place_name_or_description: "Name or Description"
+    place_name_or_email: "Name or email"
     create_product: "Create Product"
     place_product: "Enter Name"
     place_des: "Enter Description"

@@ -9,8 +9,9 @@ class Admin::ProductsController < AdminController
   def edit; end
 
   def index
-    @products = Product.active.sort_desc_by_create_time.page(params[:page])
-                       .includes(:category).per(Settings.product.admin_per_page)
+    @q = Product.ransack(params[:q])
+    @products = @q.result.active.sort_desc_by_create_time.page(params[:page])
+                  .includes(:category).per(Settings.product.admin_per_page)
   end
 
   def create

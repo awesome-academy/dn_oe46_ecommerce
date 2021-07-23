@@ -1,10 +1,12 @@
 class Admin::OrdersController < AdminController
   before_action :find_order, only: [:show, :update_status]
+  before_action :set_default_search_params
   before_action :check_status?, only: [:update_status]
 
   def index
-    @orders = Order.sort_by_created_at(:desc).page(params[:page])
-                   .per(Settings.order.per_page)
+    @q = Order.ransack(params[:q])
+    @orders = @q.result.sort_by_created_at(:desc).page(params[:page])
+                .per(Settings.order.per_page)
   end
 
   def show
@@ -40,5 +42,9 @@ class Admin::OrdersController < AdminController
 
     flash[:danger] = t "order.invalid_status"
     redirect_to orders_path
+  end
+
+  def set_default_search_params
+    params[:q] ||= {status_eq: :pending}
   end
 end

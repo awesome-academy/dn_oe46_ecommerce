@@ -148,6 +148,8 @@ vi:
     second_title: "Miễn phí vận chuyển tất cả các đơn hàng"
     third_title: "baoruby@example.com"
   form:
+    place_name_or_description: "Tên hoạc mô tả"
+    place_name_or_email: "Tên or email"
     create_product: "Tạo sản phẩm"
     place_product: "Nhập tên"
     place_des: "Nhập mô tả "

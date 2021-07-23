@@ -54,4 +54,4 @@ config/environments/*.local.yml
 # Ignore application configuration
 /config/application.yml
 .framgia-ci-reports/
-spec/
+coverage/

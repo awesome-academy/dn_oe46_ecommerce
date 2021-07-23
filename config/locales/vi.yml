@@ -1,0 +1,5 @@
+vi:
+  product:
+    not_valid: Sản phẩm không hợp lệ hoặc chưa được kích hoạt.
+  order:
+    not_valid: Đơn hàng không hợp lê.

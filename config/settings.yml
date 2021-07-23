@@ -1,0 +1,7 @@
+validate:
+  high_length: 255
+  phone_length: 11
+  normal_length: 50
+  precision: 8
+  scale: 2
+  zero: 0

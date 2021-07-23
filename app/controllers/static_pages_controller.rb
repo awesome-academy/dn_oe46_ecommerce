@@ -52,8 +52,8 @@ class StaticPagesController < ApplicationController
   end
 
   def check_old_product?
-    return false if params[:old_sort].present? || params[:old_sort] == 1 ||
-                    params[:old_sort] == 2 || params[:old_sort] == 3 ||
-                    params[:old_sort] == 4
+    params[:old_sort].present? &&
+      !(Settings.list_id.to_a.include?(params[:sort].to_i) &&
+        Settings.list_id.to_a.include?(params[:old_sort].to_i))
   end
 end

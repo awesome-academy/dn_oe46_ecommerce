@@ -1,8 +1,12 @@
 vi:
   cart:
+    delete_success: "Sản phẫm đã được xóa khỏi giỏ hàng"
+    empty: "Giỏ hàng đang rỗng "
+    add_something: "Thêm vào giỏ hàng để mua sắm vui hơn :)"
     add_success: "Sản phẩm đã được thêm vào giỏ hàng"
     update_quantity: "Sản phẩm đã được cập nhật số lượng trong giỏ hàng"
   product:
+   negative_quantity: "Không thể thêm vào giỏ hàng với số lương âm"
     total_price: "Tổng tiền"
     unit_price: "Giá"
     total_price: "Tổng giá"
@@ -27,6 +31,7 @@ vi:
   order:
     not_valid: "Đơn hàng không hợp lê."
   page:
+    confirm : "Bạn chắc chắn chứ"
     continue_shopping: "Tiếp tục mua hàng"
     checkout: "Thanh toán"
     available: "Còn hàng"

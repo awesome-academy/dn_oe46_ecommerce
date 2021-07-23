@@ -3,7 +3,7 @@ module CartsHelper
     session[:cart] ||= Array.new
   end
 
-  def find_product_in_cart product
+  def find_line_item_in_cart product
     current_cart.find{|line_item| line_item["product_id"] == product.id}
   end
 

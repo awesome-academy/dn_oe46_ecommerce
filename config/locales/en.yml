@@ -1,10 +1,12 @@
 en:
   cart:
+    delete_success: "The product has been removed from the cart"
     empty: "Your Cart is Empty"
     add_something: "Add something to make me happy :)"
     add_success: "The product has been added to cart"
     update_quantity: "The product has been updated to the quantity in the cart"
   product:
+    negative_quantity: "Cannot add to cart with negative quantity"
     total_price: "Total"
     unit_price: "Unit price"
     total_price: "Total price"
@@ -29,6 +31,7 @@ en:
   order:
     not_valid: "is not a valid order."
   page:
+    confirm : "Are you sure"
     continue_shopping: "Continue Shopping"
     checkout: "Checkout"
     available: "Available"

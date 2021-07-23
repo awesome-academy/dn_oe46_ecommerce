@@ -1,6 +1,8 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem "aws-sdk-s3"
+gem "dotenv-rails"
 gem "rails-controller-testing"
 gem "simplecov-rcov"
 gem "simplecov"
@@ -16,7 +18,6 @@ gem "rails-i18n"
 gem "bcrypt", "3.1.13"
 gem "bootstrap-sass", "3.4.1"
 gem "rails", "6.1.4"
-gem "mysql2", "0.5.2"
 gem "puma", "~> 5.0"
 gem "sass-rails", ">= 6"
 gem "webpacker", "~> 5.0"
@@ -24,8 +25,14 @@ gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.7"
 gem "bootsnap", ">= 1.4.4", require: false
 group :development, :test do
+  gem "mysql2", "0.5.2"
   gem "factory_bot_rails"
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+end
+
+group :production do
+  gem "pg"
+  gem "rails_12factor"
 end
 
 group :development do
@@ -40,6 +47,7 @@ group :development do
 end
 
 group :test do
+  gem "dox", require: false
   gem "capybara", ">= 3.26"
   gem "selenium-webdriver"
   gem "webdrivers"

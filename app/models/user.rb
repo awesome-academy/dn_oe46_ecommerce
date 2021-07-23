@@ -7,14 +7,14 @@ class User < ApplicationRecord
   has_secure_password
   has_many :orders, dependent: :destroy
   validates :full_name, presence: true,
-                        length: {maximum: Settings.validate.normal_length}
+                        length: {maximum: Settings.validate.normal_length}, on: :update
   validates :email, presence: true,
                     length: {maximum: Settings.validate.normal_length},
                     format: {with: VALID_EMAIL_REGEX}, uniqueness: true
   validates :phone, numericality: {only_integer: true},
-                    length: {maximum: Settings.validate.phone_length}
+                    length: {maximum: Settings.validate.phone_length}, on: :update
   validates :address, presence: true,
-                      length: {maximum: Settings.validate.high_length}
+                      length: {maximum: Settings.validate.high_length}, on: :update
   validates :password, presence: true,
                        length: {minimum: Settings.validate.min_pass},
                        allow_nil: true

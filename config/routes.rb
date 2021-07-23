@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post '/presigned_url', to: 'direct_upload#create'
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"
 
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
         delete "delete_from_cart/:id", to: "carts#delete_from_cart", as: "delete_from"
       end
     end
-    resources :users
+    resources :users, only: [:new, :create]
     resources :categories do
       resources :products, only: [:index]
     end

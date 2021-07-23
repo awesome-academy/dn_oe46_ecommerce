@@ -144,6 +144,7 @@ en:
     success_update: "Update profile successful"
     error_update : "Error Update. Try agian"
     please_login: "Please log in before"
+    register_success: "Register account succesful"
   header:
     one_title: "Free and Fast Delivery"
     second_title: "Free shipping On all orders"

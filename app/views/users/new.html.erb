@@ -1,0 +1,19 @@
+
+<% provide(:title, t("session.title")) %>
+
+<%= form_for @user, html: {class: "container animate"} do |f| %>
+<%= render "shared/error_messages", object: f.object %>
+  <div class="containerr">
+    <%= f.label :email %>
+    <%= f.email_field :email, class: "form_login", placeholder: t("email.placeholder"), required: true  %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password, class: "form_login", placeholder: t("password.placeholder"), required: true  %>
+
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, class: "form_login", placeholder: t("password.confirm_placeholder"), required: true  %>
+
+    <%= f.submit t("session.title"), class: "button_login" %>
+    <p><%= t "user.new_user" %><%= link_to t("form.sign_up_now"), new_user_path %></p>
+  </div>
+<% end %>

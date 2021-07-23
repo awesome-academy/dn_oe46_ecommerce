@@ -23,7 +23,7 @@
           <tbody>
             <% @products.each_with_index do |item, index| %>
               <tr>
-                <th scope="row"><%= current_index  @products.current_page, Settings.per_page, index %></th>
+              <th scope="row"><%= current_index  @products.current_page, Settings.per_page, index %></th>
                 <td>
                   <%= image_tag(item.images.first, class: "img-responsive", width: 40, height: 40) if item.images.attached? %>
                 <td><%= item.name %></td>

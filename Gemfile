@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem "rails-controller-testing"
 gem "simplecov-rcov"
 gem "simplecov"
 gem "active_storage_validations", "0.8.2"

@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
+  include CartsHelper
   before_action :set_locale
 
   private
@@ -10,5 +11,13 @@ class ApplicationController < ActionController::Base
 
   def default_url_options
     {locale: I18n.locale}
+  end
+
+  def find_product
+    @product = Product.find_by(id: params[:id])
+    return if @product
+
+    flash[:danger] = t "product.not_found"
+    redirect_to root_path
   end
 end

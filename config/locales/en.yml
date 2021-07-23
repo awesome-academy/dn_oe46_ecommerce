@@ -1,5 +1,15 @@
 en:
+  cart:
+    empty: "Your Cart is Empty"
+    add_something: "Add something to make me happy :)"
+    add_success: "The product has been added to cart"
+    update_quantity: "The product has been updated to the quantity in the cart"
   product:
+    total_price: "Total"
+    unit_price: "Unit price"
+    total_price: "Total price"
+    quantity: "Quantity"
+    title: "Product"
     empty: "No products yet"
     price: "Price"
     one: 0-$10
@@ -11,6 +21,7 @@ en:
     list: "Product list"
     not_valid: "is not valid or is not active."
     not_found: "Not found product. Try again!!!"
+    out_stock: "This item is out of stock"
   category:
     name: "Categories"
     empty: "No categories yet"
@@ -18,6 +29,9 @@ en:
   order:
     not_valid: "is not a valid order."
   page:
+    continue_shopping: "Continue Shopping"
+    checkout: "Checkout"
+    available: "Available"
     view: "Quick View"
     new: "New"
     default: "Default"

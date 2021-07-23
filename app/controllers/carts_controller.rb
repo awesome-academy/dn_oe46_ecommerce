@@ -54,7 +54,7 @@ class CartsController < ApplicationController
   private
 
   def check_quantity_params?
-    return if params[:quantity].positive?
+    return if params[:quantity].to_i.positive?
 
     flash[:danger] = t "product.negative_quantity"
     redirect_to root_path

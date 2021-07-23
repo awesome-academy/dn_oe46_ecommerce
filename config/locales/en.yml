@@ -101,6 +101,7 @@ en:
       one: "The form contains  1 error"
       other: "The form contains %{count} errors"
   password:
+    current_placeholder: "Enter Current Pass"
     not_valid: "Password is invalid. Try agian"
     title:
       reset: "Reset password"
@@ -191,3 +192,9 @@ en:
     log_in: "Logged in as:"
     bootstrap: "Start Bootstrap"
     order_item: "Order Item"
+  email_pass:
+    change_pass: "Change my password"
+    header: "<p>Hello %{email}!</p>
+             <p>Someone has requested a link to change your password. You can do this through the link below.</p>"
+    body: "<p>If you didn't request this, please ignore this email.</p>
+           <p>Your password won't change until you access the link above and create a new one.</p>"

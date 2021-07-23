@@ -98,6 +98,7 @@ vi:
       one: "Thông tin bạn nhập chứa một lỗi"
       other: "Thông tin bạn nhập chứa %{count} lỗi"
   password:
+    current_placeholder: "Nhập mật khẩu hiện tại"
     not_valid: "Mật khẩu bạn nhập không hợp lệ"
     title:
       reset: "Đặt lại mật khẩu"

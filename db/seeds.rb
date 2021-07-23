@@ -25,13 +25,13 @@ name = Faker::Commerce.product_name
 price = rand(10.0..50.0)
 quantity = rand(10..50)
 description = "Biti’s là thương hiệu giày nổi tiếng tại Việt Nam. Làm nên dấu ấn của thương hiệu
-       này phải kể đến dòng giày thể thao cao cấp Biti’s Hunter. Cửa hàng Biti’s Hunter
-       Independent có mặt ở 5 chi nhánh tại 3 thành phố Hà Nội, Sài Gòn, Đà Nẵng. Đến với
-       cửa hàng, bạn sẽ bị thu hút bởi những đôi giày được bày biện rất đẹp mắt.
-       Biti’s Hunter mang đến những đôi giày cực ư là chất lượng. Những thiết kế ở đây luôn
-       làm nổi bật lên đường sự thời thượng, phá cách những không kém phần tinh tế. Nếu là nam
-       thì bạn không phải lo lắng không có size. Tại Biti’s luôn có những size giày “cỡ đại”
-       giày bạn để phục vụ nhu cầu của bạn."
+      này phải kể đến dòng giày thể thao cao cấp Biti’s Hunter. Cửa hàng Biti’s Hunter
+      Independent có mặt ở 5 chi nhánh tại 3 thành phố Hà Nội, Sài Gòn, Đà Nẵng. Đến với
+      cửa hàng, bạn sẽ bị thu hút bởi những đôi giày được bày biện rất đẹp mắt.
+      Biti’s Hunter mang đến những đôi giày cực ư là chất lượng. Những thiết kế ở đây luôn
+      làm nổi bật lên đường sự thời thượng, phá cách những không kém phần tinh tế. Nếu là nam
+      thì bạn không phải lo lắng không có size. Tại Biti’s luôn có những size giày “cỡ đại”
+      giày bạn để phục vụ nhu cầu của bạn."
 category_id = rand(1..12)
 Product.create!(
 name: name,

@@ -1,5 +1,83 @@
 vi:
   product:
-    not_valid: Sản phẩm không hợp lệ hoặc chưa được kích hoạt.
+    not_valid: "Sản phẩm không hợp lệ hoặc chưa được kích hoạt."
   order:
-    not_valid: Đơn hàng không hợp lê.
+    not_valid: "Đơn hàng không hợp lê."
+  page:
+    base_title: "Daily Shop"
+    home: "Trang chủ"
+    contact: "Liên hệ"
+    search: "Tìm kiếm"
+    languagee: "Ngôn ngữ"
+    language:
+      eng: "Tiếng anh"
+      vie: "Tiếng việt"
+    invalid_pass: "Emai hoặc Mật khẩu không hợp lệ"
+    welcome: "Chào mừng bạn tới Daily Shop"
+    error:
+      one: "Thông tin bạn nhập chứa một lỗi"
+      other: "Thông tin bạn nhập chứa %{count} lỗi"
+  password:
+    title:
+      reset: "Đặt lại mật khẩu"
+      forgot: "Quên mật khẩu"
+    placeholder: "Nhập mật khẩu"
+    confirm_placeholder: "Nhập lại mật khẩu"
+    confirmation: "Xác nhận mật khẩu"
+    update: "Cập nhật mật khẩu"
+    send_success: " Email được gửi kèm theo hướng dẫn đặt lại mật khẩu"
+    not_empty: "Mật khẩu không được rỗng"
+    update_success: "Cập nhật mật khẩu thành công"
+    has_expired: "Đường link cập nhật mật khẩu đã hết hạn"
+  email:
+    not_found: "Không tìm thấy email. Vui lòng thử lại"
+    placeholder: "Nhập email"
+    pass_reset: "Cập nhật mật khẩu"
+    header_reset: "Để cập nhật lại mật khẩu hãy nhập vào đường dẫn bên dưới"
+    content_reset: "Đường link có hạn trong 2 giờ<br>
+                    Nếu bạn không yêu cầu đặt lại mật khẩu của mình,
+                    vui lòng bỏ qua email này và mật khẩu của bạn sẽ được giữ nguyên."
+  user:
+    title:
+      edit: "Thay đổi hồ sơ"
+      new: "Đăng ký"
+    order: "Đơn hàng"
+    setting: "Hồ sơ"
+    logout: "Đăng xuất"
+    new_user: "Tạo mới ?"
+    full_name: "Họ tên"
+    placeholder: "Nhập họ tên"
+    phone:
+      placeholder: "Nhập số điện thoại"
+    address:
+      placeholder: "Nhập địa chỉ"
+    incorrect_user: "Bạn không có quyền để sửa đổi"
+    not_found: "Không tìm thấy người dùng . Thử lai"
+    not_valid: "Người dùng không khớp. thử lại"
+    success_update: "Cập nhật thông tin hồ sơ thành công"
+    error_update: "Cập nhật thất bại. Vui lòng thử lại"
+    please_login: "Vui lòng đăng nhâp trước khi thực hiện"
+  header:
+    one_title: "Giao hàng miễn phí và nhanh chóng"
+    second_title: "Miễn phí vận chuyển tất cả các đơn hàng"
+    third_title: "baoruby@example.com"
+  form:
+    update: "Cập nhật"
+    create_account: "Tạo tài khoản"
+    login_now: "Đăng nhập ngay?"
+    submit: "Xác nhận"
+    sign_up_now: "Đăng ký ngay!!!"
+  session:
+    title: "Đăng nhập"
+  checkbox:
+    remember: "Ghi nhớ tài khoản"
+  footer:
+    infor: "Thông tin"
+    men: "Đồ nam"
+    women: "Đồ nữ"
+    store_infor: "Thông tin liên hệ"
+    address: "Address : 60 Ngo Si Lien, Lien Chieu, <span>Da Nang.</span>"
+    email: "baoruby@example.com"
+    phone: "0877654121"
+    flick: "Bài mới"
+    copy: "&copy 2021 Smart Shop. Đăng ký bản quyền | Thiết kế bởi RubyTeam"

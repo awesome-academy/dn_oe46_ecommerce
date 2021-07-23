@@ -10,6 +10,7 @@ vi:
     add_success: "Sản phẩm đã được thêm vào giỏ hàng"
     update_quantity: "Sản phẩm đã được cập nhật số lượng trong giỏ hàng"
   product:
+    recently: "Gần đây"
     name: "Tên sản phẩm"
     image: "Hình ảnh"
     created_at: "Ngày tạo"

@@ -10,6 +10,7 @@ en:
     add_success: "The product has been added to cart"
     update_quantity: "The product has been updated to the quantity in the cart"
   product:
+    recently: "Recently"
     name: "Product Name"
     image: "Product Image"
     created_at: Created At

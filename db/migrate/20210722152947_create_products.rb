@@ -5,7 +5,7 @@ class CreateProducts < ActiveRecord::Migration[6.1]
       t.decimal :price, precision: Settings.validate.precision,
                         scale: Settings.validate.scale
       t.integer :quantity
-      t.string :description
+      t.text :description
       t.references :category, null: false, foreign_key: true
 
       t.timestamps

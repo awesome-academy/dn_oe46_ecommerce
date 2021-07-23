@@ -8,3 +8,12 @@ validate:
   min_pass: 6
 product:
   per_page: 15
+  expensive: 50
+sort_name_asc: 1
+sort_name_desc: 2
+sort_price_asc: 3
+sort_price_desc: 4
+filter_price_low: 5
+filter_price_normal: 6
+filter_price_medium: 7
+filter_price_hight: 8

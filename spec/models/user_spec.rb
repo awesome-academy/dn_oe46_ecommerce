@@ -86,7 +86,8 @@ RSpec.describe User, type: :model do
 
   describe "#downcase_email" do
     it "is downcase email before save calllback" do
-      subject.reload.email == "a@gmail.com"
+      subject.update!(email: "A@GMAIL.COM")
+      expect(subject.reload.email).to eq("a@gmail.com")
     end
   end
 end

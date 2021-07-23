@@ -47,11 +47,6 @@ a.parent_cate {
   margin-bottom: 3%;
 }
 
-.col-md-12.pagination-grid.text-center {
-  margin-top: -70px;
-  margin-bottom: 25px;
-}
-
 .dropdown-menu.aria-labelledby\=.show  {
   margin-top: 8px;
   margin-left: 4px;
@@ -1069,7 +1064,7 @@ label.checkbox {
   margin-top: 30px;
 }
 .pagination {
-  margin: 34px 15px 0 0;
+  margin: 0px 0px 13px 0;
 }
 
 /*-- single-page --*/
@@ -1412,4 +1407,33 @@ opacity : 1;
 }
 .text-muted{
   padding-top: 13px;
+}
+
+td img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.status_order{
+  padding:2px;
+  color:white;
+}
+
+
+span.yellow{
+  background-color: #ffc107;
+}
+
+span.red{
+  background-color: red;
+}
+
+span.green{
+  background-color: green;
+}
+
+span.brown{
+  background-color: #006065e0;
 }

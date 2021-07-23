@@ -1,4 +1,7 @@
 vi:
+  time:
+    formats:
+      own: "%H:%M:%S, %d-%m-%Y"
   cart:
     your_cart: "Giỏ hàng của bạn"
     delete_success: "Sản phẫm đã được xóa khỏi giỏ hàng"
@@ -7,6 +10,9 @@ vi:
     add_success: "Sản phẩm đã được thêm vào giỏ hàng"
     update_quantity: "Sản phẩm đã được cập nhật số lượng trong giỏ hàng"
   product:
+    name: "Tên sản phẩm"
+    image: "Hình ảnh"
+    created_at: "Ngày tạo"
     negative_quantity: "Không thể thêm vào giỏ hàng với số lương âm"
     please_update_quantity: "Vui lòng cập nhật lại số lượng của sản phẩm %{name} trong giỏ hàng trước khi thanh toán"
     name_quantity: "%{name} x %{quantity}"
@@ -32,10 +38,19 @@ vi:
     empty: "Chưa có danh muc  nào"
     not_found: "Không tìm thấy danh mục"
   order:
+    no_order: "Bạn chưa có đơn hàng nào"
+    cancel_error: "Không thể hủy đơn hàng lúc này"
+    t_cancel: "Hủy đơn"
+    status: "Trạng thái"
+    cancel: "Bạn đã hủy đơn hàng thành công"
     place_success: "Bạn đã đặt hàng thành công"
     place_order: "Đặt hàng"
     not_valid: "Đơn hàng không hợp lê."
   page:
+    order: "Đơn hàng"
+    order_link: "Đơn hàng > "
+    order_detail: "Đơn hàng chi tiết"
+    address: "Địa chỉ"
     cart: "Giỏ hàng"
     home_checkout: "Trang chủ > "
     cart_checkout : "Giỏ hàng > "
@@ -80,6 +95,7 @@ vi:
     update_success: "Cập nhật mật khẩu thành công"
     has_expired: "Đường link cập nhật mật khẩu đã hết hạn"
   email:
+    title: "Email"
     not_valid: "Email bạn nhập không hợp lệ"
     not_found: "Không tìm thấy email. Vui lòng thử lại"
     placeholder: "Nhập email"
@@ -89,6 +105,7 @@ vi:
                     Nếu bạn không yêu cầu đặt lại mật khẩu của mình,
                     vui lòng bỏ qua email này và mật khẩu của bạn sẽ được giữ nguyên."
   user:
+    mphone: "Điện thoại"
     title:
       edit: "Thay đổi hồ sơ"
       new: "Đăng ký"
@@ -133,3 +150,5 @@ vi:
     phone: "0877654121"
     flick: "Bài mới"
     copy: "&copy 2021 Smart Shop. Đăng ký bản quyền | Thiết kế bởi RubyTeam"
+order_item:
+    no_order: "Không tìm thấy đơn hàng chi tiết nào"

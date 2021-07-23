@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <h3 class="checkout"><%= link_to t("page.home_checkout"), root_path %><%= link_to t("page.order_link"), orders_path %><%= t "page.order_details" %></h3>
+  </div>
+  <% if @order_items.present? %>
+    <div class="row">
+      <table class="table table-hover table-bordered ">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col" ></th>
+            <th scope="col text-center"><%= t "product.image" %></th>
+            <th scope="col"><%= t "product.name" %></th>
+            <th scope="col"><%= t "product.unit_price"%></th>
+            <th scope="col"><%= t "product.quantity" %></th>
+            <th scope="col"><%= t "product.total_price" %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% count = 0 %>
+          <% @order_items.each_with_index do |item, index| %>
+            <tr>
+              <th scope="row"><%= current_index  @order_items.current_page, Settings.per_page, index %></th>
+              <td><%= image_tag("d1.jpg", class: "img-responsive", width: 40, height: 40) %></td>
+              <td><%= item.product.name %></td>
+              <td><%= number_to_currency item.unit_price %></td>
+              <td><%= item.quantity %></td>
+              <td><%= number_to_currency item.total_price %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <%= will_paginate %>
+    </div>
+    <% if @order.pending? %>
+      <div class="row justify-content-md-center">
+        <%= link_to t("order.t_cancel"), update_status_order_path(@order, status: :cancel, page: @page),method: :put, class: "btn btn-danger" %>
+      </div>
+    <% end %>
+  <% else %>
+    <h2><%= t "order_item.no_order" %><h2>
+  <% end %>
+</div>

@@ -1,6 +1,6 @@
 <div class="list_of_product">
   <% if @products.any? %>
-    <%= render @products %>
+    <%= render @products ,tag: :new %>
     <div class="col-md-12 pagination-grid text-center">
       <%= will_paginate @products %>
     </div>

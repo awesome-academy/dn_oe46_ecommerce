@@ -49,6 +49,7 @@ en:
     not_valid: "is not a valid order."
   page:
     order: "Order"
+    hot_trend: "Hot trend product"
     order_link: "Order > "
     order_detail: "Order details"
     address: "Address"

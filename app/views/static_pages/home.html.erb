@@ -20,4 +20,13 @@
     </div>
     <%= render "static_pages/list_of_product"%>
   </div>
+  <% if @list_trend_product.present? %>
+    <div class="container list_trend">
+      <hr>
+      <h4 class="text-center hot_trend"><%= t "page.hot_trend" %><h4>
+      <div class="list_of_product">
+        <%= render @list_trend_product, tag: :trend  %>
+      </div>
+    </div>
+  <% end %>
 </div>

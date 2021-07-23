@@ -5,6 +5,7 @@ class StaticPagesController < ApplicationController
     @categories = Category.parents
     @products = Product.sort_desc_by_create_time
                        .page(params[:page]).per(Settings.product.per_page)
+    @list_trend_product = OrderItem.get_trending_product
   end
 
   def sort

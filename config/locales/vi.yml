@@ -38,6 +38,7 @@ vi:
     empty: "Chưa có danh muc  nào"
     not_found: "Không tìm thấy danh mục"
   order:
+    not_found: "Không tìm thấy đơn hàng . Vui lòng thử lại"
     no_order: "Bạn chưa có đơn hàng nào"
     cancel_error: "Không thể hủy đơn hàng lúc này"
     t_cancel: "Hủy đơn"
@@ -47,6 +48,7 @@ vi:
     place_order: "Đặt hàng"
     not_valid: "Đơn hàng không hợp lê."
   page:
+    hot_trend: "Sản phẩm bán chạy"
     order: "Đơn hàng"
     order_link: "Đơn hàng > "
     order_detail: "Đơn hàng chi tiết"

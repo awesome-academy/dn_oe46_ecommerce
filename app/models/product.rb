@@ -7,4 +7,5 @@ class Product < ApplicationRecord
                    length: {maximum: Settings.validate.normal_length}
   validates :quantity, presence: true, numericality:
                       {only_integer: true, greater_than: Settings.validate.zero}
+  scope :sort_desc_by_create_time, ->{order(created_at: :DESC)}
 end

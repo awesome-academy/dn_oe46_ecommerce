@@ -1,9 +1,32 @@
 en:
   product:
+    empty: "No products yet"
+    price: "Price"
+    one: 0-$10
+    two: 10-$30
+    three: 30-$50
+    four: Up-$10
+    in_stock: "In stock :"
+    add_cart: "Add to cart"
+    list: "Product list"
     not_valid: "is not valid or is not active."
+    not_found: "Not found product. Try again!!!"
+  category:
+    name: "Categories"
+    empty: "No categories yet"
+    not_found: "Not found category. Try again!!!"
   order:
     not_valid: "is not a valid order."
   page:
+    view: "Quick View"
+    new: "New"
+    default: "Default"
+    sort_by: "Sort by"
+    sort:
+      name_asc: Name(A - Z)
+      name_desc: Name(Z - A)
+      price_desc: Price(Low - High)
+      price_asc: Price(High - Low)
     base_title: "Smart Shop"
     home: "Home"
     contact: "Contact"

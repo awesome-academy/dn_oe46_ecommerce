@@ -6,9 +6,8 @@ class ProductsController < ApplicationController
 
   def index
     @categories = Category.parents
-    @products = Kaminari.paginate_array(Product
-                        .list_by_category(list_children_id))
-                        .page(params[:page]).per(Settings.product.per_page)
+    @products = Product.list_by_category(list_children_id)
+                       .page(params[:page]).per(Settings.product.per_page)
     render "static_pages/home"
   end
 

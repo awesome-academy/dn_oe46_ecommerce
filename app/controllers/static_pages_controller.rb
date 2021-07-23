@@ -3,15 +3,15 @@ class StaticPagesController < ApplicationController
   before_action :list_old_product, only: [:sort], if: :check_old_product?
   def home
     @categories = Category.parents
-    @products = Kaminari.paginate_array(Product.sort_desc_by_create_time)
-                        .page(params[:page]).per(Settings.product.per_page)
+    @products = Product.sort_desc_by_create_time
+                       .page(params[:page]).per(Settings.product.per_page)
   end
 
   def sort
     @old_sort = params[:sort]
     @categories = Category.parents
-    @products = Kaminari.paginate_array(list_product(params[:sort]))
-                        .page(params[:page]).per(Settings.product.per_page)
+    @products = list_product(params[:sort]).page(params[:page])
+                                           .per(Settings.product.per_page)
     respond_to do |format|
       format.html{render "static_pages/home"}
       format.js

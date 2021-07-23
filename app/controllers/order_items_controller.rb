@@ -2,10 +2,8 @@ class OrderItemsController < ApplicationController
   before_action :find_order, only: [:index]
 
   def index
-    @order_items = Kaminari.paginate_array(@order.order_items
-                           .includes(:product))
-                           .page(params[:page])
-                           .per(Settings.order_item.per_page)
+    @order_items = @order.order_items.includes(:product)
+                         .page(params[:page]).per(Settings.order_item.per_page)
     @page = params[:my_page]
   end
 

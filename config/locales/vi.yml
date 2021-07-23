@@ -20,7 +20,7 @@ vi:
     one: 0-$10
     two: 10-$30
     three: 30-$50
-    four: Trên-$10
+    four: Trên-$50
     in_stock: "Còn hàng :"
     add_cart: "Thêm vào giỏ "
     list: "Danh sách sản phẩm"
@@ -36,6 +36,9 @@ vi:
     place_order: "Đặt hàng"
     not_valid: "Đơn hàng không hợp lê."
   page:
+    cart: "Giỏ hàng"
+    home_checkout: "Trang chủ > "
+    cart_checkout : "Giỏ hàng > "
     checkout: "Thanh toán"
     confirm : "Bạn chắc chắn chứ"
     continue_shopping: "Tiếp tục mua hàng"

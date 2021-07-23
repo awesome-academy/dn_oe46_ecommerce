@@ -3,8 +3,9 @@ class Admin::OrdersController < AdminController
   before_action :check_status?, only: [:update_status]
 
   def index
-    @orders = Order.sort_by_created_at(:desc).page(params[:page])
-                   .per(Settings.order.per_page)
+    @q = Order.ransack(params[:q])
+    @orders = @q.result.sort_by_created_at(:desc).page(params[:page])
+                .per(Settings.order.per_page)
   end
 
   def show

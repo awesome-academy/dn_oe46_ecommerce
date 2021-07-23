@@ -1,0 +1,5 @@
+<%= search_form_for [:admin, @q], class: "form-inline form_search mb-4" do |f| %>
+    <%= f.search_field :full_name_or_email_cont, class: "form-control mr-sm-2", placeholder: t("form.place_name_or_email") %>
+    <%= f.search_field :status_eq, class: "form-control mr-sm-2", placeholder: t("order.status") %>
+    <%= f.submit t("page.search"), class: "btn btn-success" %>
+<% end %>

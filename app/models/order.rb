@@ -2,6 +2,9 @@ class Order < ApplicationRecord
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
 
   enum status: {pending: 0, approve: 1, deny: 2, cancel: 3}
+  ransacker :status, formatter: proc{|v| statuses[v]} do |parent|
+    parent.table[:status]
+  end
   belongs_to :user
   has_many :order_items, dependent: :destroy
   has_many :products, through: :order_items

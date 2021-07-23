@@ -5,6 +5,7 @@
         <li class="breadcrumb-item active"><%= t "product.title" %></li>
       </ol>
     </div>
+    <%= render "admin/products/search_form" %>
     <% if @products.present? %>
       <div class="row">
         <table class="table table-hover table-bordered ">
@@ -12,10 +13,10 @@
             <tr>
               <th scope="col" ></th>
               <th scope="col text-center"><%= t "product.image" %></th>
-              <th scope="col"><%= t "product.name" %></th>
-              <th scope="col"><%= t "product.description" %></th>
-              <th scope="col"><%= t "product.quantity"%></th>
-              <th scope="col"><%= t "product.price" %></th>
+              <th scope="col"><%= sort_link(@q, :name, t("product.name")) %></th>
+              <th scope="col"><%= sort_link(@q, :description, t("product.description")) %></th>
+              <th scope="col"><%= sort_link(@q, :quantity, t("product.quantity")) %></th>
+              <th scope="col"><%= sort_link(@q, :price, t("product.price")) %></th>
               <th scope="col"><%= t "product.category" %></th>
               <th scope="col"><%= t "product.action" %></th>
             </tr>

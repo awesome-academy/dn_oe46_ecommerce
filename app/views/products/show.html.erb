@@ -1,0 +1,38 @@
+<!-- single -->
+<div class="single">
+  <div class="container">
+    <div class="col-md-6 single-right-left animated wow slideInUp animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInUp;">
+      <div class="grid images_3_of_2">
+        <div class="flexslider">
+          <ul class="slides">
+            <li data-thumb="<%= asset_path "d2.jpg" %>">
+              <div class="thumb-image"><%= image_tag("d2.jpg", class: "img-responsive") %></div>
+            </li>
+            <li data-thumb="<%= asset_path "d1.jpg" %>">
+              <div class="thumb-image"><%= image_tag("d1.jpg", class: "img-responsive") %></div>
+            </li>
+            <li data-thumb="<%= asset_path "d3.jpg" %>">
+              <div class="thumb-image"><%= image_tag("d3.jpg", class: "img-responsive") %></div>
+            </li>
+            <li data-thumb="<%= asset_path "d4.jpg" %>">
+              <div class="thumb-image"><%= image_tag("d4.jpg", class: "img-responsive") %></div>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 single-right-left simpleCart_shelfItem animated wow slideInRight animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInRight;">
+      <h3><%= @product.name %></h3>
+      <p><span class="item_price"><%= number_to_currency @product.price %></p>
+      <h4><%= t "product.in_stock" %> <%= @product.quantity %></h4>
+      <div class="description">
+        <h5><%= @product.description %></h5>
+      </div>
+      <div class="occasion-cart">
+        <a href="#" class="item_add hvr-outline-out button2"><%= t "product.add_cart" %></a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //single -->

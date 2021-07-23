@@ -2,9 +2,13 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.7.0"
+gem "jquery-easing-rails"
+gem "jquery-rails"
 gem "config"
 gem "faker", :git => "https://github.com/faker-ruby/faker.git", :branch => "master"
 gem "figaro"
+gem "kaminari"
+gem "bootstrap-will_paginate", "1.0.0"
 gem "rails-i18n"
 gem "bcrypt", "3.1.13"
 gem "bootstrap-sass", "3.4.1"

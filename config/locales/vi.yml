@@ -1,9 +1,32 @@
 vi:
   product:
+    empty: "Chưa có sản phẩm nào"
+    price: "Giá"
+    one: 0-$10
+    two: 10-$30
+    three: 30-$50
+    four: Trên-$10
+    in_stock: "Còn hàng :"
+    add_cart: "Thêm vào giỏ "
+    list: "Danh sách sản phẩm"
     not_valid: "Sản phẩm không hợp lệ hoặc chưa được kích hoạt."
+    not_found: "Không tìm thấy sản phẩm này"
+  category:
+    name: "Danh mục"
+    empty: "Chưa có danh muc  nào"
+    not_found: "Không tìm thấy danh mục"
   order:
     not_valid: "Đơn hàng không hợp lê."
   page:
+    view: "Chi tiết"
+    new: "Mới"
+    default: "Mặc định"
+    sort_by: "Sắp xếp"
+    sort:
+      name_asc: Tên(A - Z)
+      name_desc: Tên(Z - A)
+      price_desc: Giá(Low - High)
+      price_asc: Giá(High - Low)
     base_title: "Smart Shop"
     home: "Trang chủ"
     contact: "Liên hệ"
@@ -18,7 +41,7 @@ vi:
       one: "Thông tin bạn nhập chứa một lỗi"
       other: "Thông tin bạn nhập chứa %{count} lỗi"
   password:
-  not_valid: "Mật khẩu bạn nhập không hợp lệ"
+    not_valid: "Mật khẩu bạn nhập không hợp lệ"
     title:
       reset: "Đặt lại mật khẩu"
       forgot: "Quên mật khẩu"

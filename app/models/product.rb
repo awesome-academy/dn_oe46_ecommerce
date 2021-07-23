@@ -16,6 +16,7 @@ class Product < ApplicationRecord
   scope :expensive_price, ->{where("price > ?", Settings.product.expensive)}
   scope :list_by_category, ->(list_id){where(category_id: list_id)}
   scope :list_by_ids, ->(list_id){where(id: list_id)}
+  scope :search_by_name, ->(name){where("name LIKE '%#{name}%'")}
 
   def check_enought_quantity? quantity_params
     quantity_params.positive? && quantity >= quantity_params

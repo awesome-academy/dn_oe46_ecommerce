@@ -2,7 +2,12 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"
 
-    get "/sort", to: "static_pages#sort"
+    resources :static_pages, only: [:home] do
+      collection do
+        get :sort
+        get :search
+      end
+    end
     resources :carts, only: [:index] do
       collection do
         post "add_to_cart/:id", to: "carts#add_to_cart", as: "add_to"

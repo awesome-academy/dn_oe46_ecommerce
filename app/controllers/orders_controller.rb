@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   before_action :logged_in_user, only: [:new, :create, :index, :update_status]
   before_action :find_order, only: [:update_status]
+  before_action :check_status?, only: [:update_status]
 
   def new
     @order = current_user.orders.build
@@ -28,9 +29,11 @@ class OrdersController < ApplicationController
   end
 
   def update_status
-    if @order.update(status: params[:status])
+    ActiveRecord::Base.transaction do
+      @order.update!(status: params[:status])
+      @order.rollback_quantity
       flash[:info] = t "order.cancel"
-    else
+    rescue ActiveRecord::RecordInvalid
       flash[:danger] = t "order.cancel_error"
     end
     redirect_to orders_path(page: params[:page])
@@ -63,5 +66,12 @@ class OrdersController < ApplicationController
 
     flash[:warning] = t("product.please_update_quantity",
                         name: item[:product].name)
+  end
+
+  def check_status?
+    return if Order.statuses.keys.include?(params[:status])
+
+    flash[:danger] = t "order.invalid_status"
+    redirect_to orders_path
   end
 end

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= full_title yield(:title) %></title>
+  <%= render "layouts/rails_default" %>
+  <%= render "layouts/shim" %>
+</head>
+<body>
+    <%= render "layouts/admin_header"%>
+    <div id="layoutSidenav">
+      <%= render "layouts/side_bar"%>
+      <div id="layoutSidenav_content">
+        <%= render "layouts/flash_messages" %>
+        <%= yield %>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

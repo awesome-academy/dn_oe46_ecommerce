@@ -1,0 +1,48 @@
+<% provide(:title, t("admin.order")) %>
+
+<main class="ml-4 mr-4">
+  <div class="container-fluid px-4">
+    <div class="row">
+      <ol class="breadcrumb mb-4 mt-2 ">
+        <li class="breadcrumb-item active"><%= t "page.order" %></li>
+      </ol>
+    </div>
+    <div class="row">
+      <% if @orders.present? %>
+        <table class="table table-hover table-bordered">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" class="text-center"><%= t "product.created_at" %></th>
+              <th scope="col" class="text-center"><%= t "user.full_name" %></th>
+              <th scope="col" class="text-center"><%= t "page.address" %></th>
+              <th scope="col" class="text-center"><%= t "email.title" %></th>
+              <th scope="col" class="text-center"><%= t "user.mphone" %></th>
+              <th scope="col" class="text-center"><%= t "product.price" %></th>
+              <th scope="col" class="text-center"><%= t "order.status" %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @orders.each_with_index do |item, index| %>
+              <tr data-link="<%= admin_order_path(item, my_page: @orders.current_page) %>">
+                <th scope="row"><%= current_index  @orders.current_page, Settings.per_page, index %></th>
+                <td><%= l(item.created_at, format: :own) %></td>
+                <td><%= item.full_name %></td>
+                <td><%= item.address %></td>
+                <td><%= item.email %></td>
+                <td><%= item.phone %></td>
+                <td><%= number_to_currency item.total_price %></td>
+                <td><span class="status_order <%= status_color item %>"><%= item.status %></span></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <div class="col-md-12 pagination-grid text-center">
+          <%= will_paginate @orders %>
+        </div>
+      <% else %>
+        <h2><%= t "order.no_order" %><h2>
+      <% end %>
+    </div>
+  </div>
+</main>

@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DnOe46Ecommerce</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
-    <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
+    <title><%= full_title yield(:title) %></title>
+    <%= render "layouts/rails_default" %>
+    <%= render "layouts/shim" %>
   </head>
 
   <body>
+    <%= render "layouts/user_header" %>
+    <% flash.each do |message_type, message| %>
+      <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+    <% end %>
     <%= yield %>
+    <%= render "layouts/user_footer" %>
   </body>
 </html>

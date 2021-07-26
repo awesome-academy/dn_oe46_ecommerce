@@ -5,3 +5,4 @@ validate:
   precision: 8
   scale: 2
   zero: 0
+  min_pass: 6

@@ -1,5 +1,86 @@
 en:
   product:
-    not_valid: is not valid or is not active.
+    not_valid: "is not valid or is not active."
   order:
-    not_valid: is not a valid order.
+    not_valid: "is not a valid order."
+  page:
+    base_title: "Smart Shop"
+    home: "Home"
+    contact: "Contact"
+    search : "Search"
+    languagee: "Language"
+    language:
+      eng: "English"
+      vie: "Vietnamese"
+    invalid_pass: "Emai or Password is not valid"
+    welcome: "Welcome to the Daily Shop"
+    error:
+      one: "The form contains  1 error"
+      other: "The form contains %{count} errors"
+  password:
+    not_valid: "Password is invalid. Try agian"
+    title:
+      reset: "Reset password"
+      forgot: "Forgot password"
+    placeholder: "Enter Password"
+    confirm_placeholder: "Enter Confirm Pass"
+    confirmation: "Confirmation"
+    update: "Update password"
+    send_success: "Email sent with password reset instructions"
+    not_empty: "Password is not empty!!!"
+    update_success: "Update password sucess"
+    has_expired: "Password reset has expired"
+  email:
+    not_valid: "Email not valid . Try again"
+    not_found: "Not found email. Try again!!!"
+    placeholder: "Enter email"
+    pass_reset: "Password reset"
+    header_reset: "To reset your password click the link below:"
+    content_reset: "This link will expire in two hours.<br>
+                    If you did not request your password to be reset, please ignore this email and
+                    your password will stay as it is."
+  user:
+    title:
+      edit: "Edit profile"
+      new: "Sign up"
+    order: "Orders"
+    setting: "Settings"
+    logout: "Log out"
+    login: "Log in"
+    new_user: "new User ?"
+    full_name: "Full name"
+    placeholder: "Enter Full Name"
+    phone:
+      placeholder: "Enter Phone"
+    address:
+      placeholder: "Enter Address"
+    incorrect_user: "You don't have permission to edit!!!"
+    not_found: "Not found user. Try again!!!"
+    not_valid: "User not valid. Try again!!!"
+    success_update: "Update profile successful"
+    error_update : "Error Update. Try agian"
+    please_login: "Please log in before"
+  header:
+    one_title: "Free and Fast Delivery"
+    second_title: "Free shipping On all orders"
+    third_title: "baoruby@example.com"
+  form:
+    update: "Update"
+    create_account: "Create my account"
+    login_now: "Login now?"
+    submit: "Submit"
+    sign_up_now: "Sign up now!!!"
+  session:
+    title: "Log in"
+  checkbox:
+    remember: "Remember me"
+  footer:
+    infor: "Information"
+    men: "Men's Wear"
+    women: "Women's Wear"
+    store_infor: "Store Information"
+    address: "Address : 60 Ngo Si Lien, Lien Chieu, <span>Da Nang.</span>"
+    email: "baoruby@example.com"
+    phone: "0877654121"
+    flick: "Flickr Posts"
+    copy: "&copy 2021 Smart Shop. All rights reserved | Design by RubyTeam"

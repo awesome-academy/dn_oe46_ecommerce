@@ -17,6 +17,6 @@ class OrderItem < ApplicationRecord
   def order_present
     return if order.present?
 
-    errors.add(:product, t("product.not_valid"))
+    errors.add(:order, t("order.not_valid"))
   end
 end

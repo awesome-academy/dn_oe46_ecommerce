@@ -1,0 +1,282 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#error_explanation {
+  color: red;
+  ul {
+      color: red;
+      margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+#logo {
+	float: left;
+  margin-right: 25%;
+	font-size: 1.7em;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	padding-top: 15px;
+	font-weight: bold;
+	}
+	#logo:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.dropdown-menu.aria-labelledby\=.show  {
+  margin-top: 8px;
+  margin-left: 4px;
+}
+
+.form_search{
+  margin-right: 10%;
+}
+
+.page_head {
+  border-bottom: 1px solid #eee;
+  margin-bottom: -12px;
+}
+.header ul li {
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+  color:#848484;
+  font-size:16px;
+  padding: 12px 0;
+}
+.header ul li:nth-child(2) {
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+}
+.header ul li a {
+  color:#848484;
+  text-decoration:none;
+}
+.header ul li span {
+  margin-right: 12px;
+  top: 2px;
+  color: #fda30e;
+}
+.header ul li:nth-child(3) {
+  text-align: right;
+}
+.header ul li:nth-child(1) {
+  text-align: left;
+}
+.header-right {
+  text-align: right;
+}
+.header-left{
+  text-align: left;
+}
+
+#ex4 .p1[data-count]:after{
+  position:absolute;
+  right:10%;
+  top:8%;
+  content: attr(data-count);
+  font-size:40%;
+  padding:.2em;
+  border-radius:50%;
+  line-height:1em;
+  color: white;
+  background:rgba(255,0,0,.85);
+  text-align:center;
+  min-width: 1em;
+  //font-weight:bold;
+}
+
+.cartt{
+  color: white;
+}
+
+.form_login {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.button_login {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+.containerr {
+  padding: 16px;
+  width: 673px
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.animate{
+  width: 50%;
+  margin-top: 5px;
+}
+
+
+/*-- footer --*/
+.footer{
+  border-top:1px solid #f1f1f1;
+}
+
+.footer-right{
+  margin-left: 13%;
+}
+
+.ul_footer{
+  margin-left: -40px;
+}
+.footer-left p{
+  color: #848484;
+  line-height: 2.2em;
+  font-size: 14px;
+  margin-top: 22px;
+}
+.newsright input[type="text"] {
+  outline: none;
+  width: 100%;
+  padding: 14px 10px;
+  color: #848484;
+  font-size: 16px;
+  border: 1px solid #dadada;
+width: 71%;
+}
+.newsright input[type="submit"]{
+  color: #fff;
+  background: #fda30e;
+  border: none;
+  padding: 13px 20px 14px;
+  font-size: 18px;
+  outline: none;
+  text-transform: uppercase;
+  margin: 0 0 0 -4px;
+}
+.newsright input[type="submit"]:hover{
+  background: #000;
+}
+.newsleft h3 {
+  font-size: 24px;
+  margin-top: 15px;
+  color: #000;
+}
+.sign-grds {
+  margin-top: 64px;
+}
+.sign-gd h4,.sign-gd-two h4 {
+  color: #FDA30E;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+.sign-gd ul li,.sign-gd-two ul li {
+  color: #848484;
+  line-height: 2em;
+  font-size: 14px;
+list-style-type:none;
+}
+.sign-gd ul li a,.sign-gd-two ul li a{
+  color: #848484;
+text-decoration:none;
+}
+.sign-gd ul li a:hover,.sign-gd-two ul li a:hover{
+  color: #FDA30E;
+}
+.sign-gd-two ul li i{
+color: #999;
+  border: 1px solid #999;
+  padding:.5em;
+  border-radius: 100%;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+-o-border-radius: 100%;
+-ms-border-radius: 100%;
+  margin-right: 1em;
+}
+.sign-gd-two ul li{
+margin-bottom:10px;
+}
+
+.flickr-post ul li{
+display:inline-block;
+margin:5px 5px;
+}
+.flickr-post ul li {
+  display: inline-block;
+  margin: 1% 1%;
+  width: 28%;
+}
+p.copy-right {
+  color: #848484;
+  text-align: center;
+  margin-top: 62px;
+  font-size: 14px;
+}
+p.copy-right a{
+  color: #848484;
+text-decoration:none;
+}
+p.copy-right a:hover{
+color: #FDA30E;
+}
+/*-- //footer --*/

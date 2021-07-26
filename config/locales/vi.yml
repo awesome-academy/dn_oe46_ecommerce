@@ -4,7 +4,7 @@ vi:
   order:
     not_valid: "Đơn hàng không hợp lê."
   page:
-    base_title: "Daily Shop"
+    base_title: "Smart Shop"
     home: "Trang chủ"
     contact: "Liên hệ"
     search: "Tìm kiếm"
@@ -18,6 +18,7 @@ vi:
       one: "Thông tin bạn nhập chứa một lỗi"
       other: "Thông tin bạn nhập chứa %{count} lỗi"
   password:
+  not_valid: "Mật khẩu bạn nhập không hợp lệ"
     title:
       reset: "Đặt lại mật khẩu"
       forgot: "Quên mật khẩu"
@@ -30,6 +31,7 @@ vi:
     update_success: "Cập nhật mật khẩu thành công"
     has_expired: "Đường link cập nhật mật khẩu đã hết hạn"
   email:
+    not_valid: "Email bạn nhập không hợp lệ"
     not_found: "Không tìm thấy email. Vui lòng thử lại"
     placeholder: "Nhập email"
     pass_reset: "Cập nhật mật khẩu"
@@ -44,6 +46,7 @@ vi:
     order: "Đơn hàng"
     setting: "Hồ sơ"
     logout: "Đăng xuất"
+    login: "Đăng nhập"
     new_user: "Tạo mới ?"
     full_name: "Họ tên"
     placeholder: "Nhập họ tên"

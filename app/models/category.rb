@@ -6,4 +6,5 @@ class Category < ApplicationRecord
   has_many :products, dependent: :destroy
   validates :name, presence: true,
                    length: {maximum: Settings.validate.normal_length}
+  scope :parents, ->{where parent_id: nil}
 end

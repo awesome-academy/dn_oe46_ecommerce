@@ -8,4 +8,11 @@ class Product < ApplicationRecord
   validates :quantity, presence: true, numericality:
                       {only_integer: true, greater_than: Settings.validate.zero}
   scope :sort_desc_by_create_time, ->{order(created_at: :DESC)}
+  scope :sort_by_name, ->(sort_type){order(name: sort_type)}
+  scope :sort_by_price, ->(sort_type){order(price: sort_type)}
+  scope :filter_product_by_price,
+        ->(one, two){where("price BETWEEN ? AND ?", one, two)}
+  scope :expensive_price, ->{where("price > ?", Settings.product.expensive)}
+  scope :list_by_category, ->(list_id){where(category_id: list_id)}
+  scope :list_by_ids, ->(list_id){where(id: list_id)}
 end

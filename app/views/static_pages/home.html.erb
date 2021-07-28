@@ -14,38 +14,10 @@
     </div>
     <div class="col-md-9 products-right">
       <h5><%= t "product.list" %></h5>
-      <div class="sort-grid">
-        <div class="sorting">
-          <h6><%= t "page.sort_by" %></h6>
-          <select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
-            <option value="null"><%= t "page.default" %></option>
-            <option value="null"><% t "page.sort.name_asc" %></option>
-            <option value="null"><% t "page.sort.name_desc" %></option>
-            <option value="null"><% t "page.sort.price_asc" %></option>
-            <option value="null"><% t "page.sort.price_desc" %></option>
-          </select>
-          <div class="clearfix"></div>
-        </div>
-        <div class="sorting">
-          <h6><%= t "product.price" %></h6>
-          <select id="country2" onchange="change_country(this.value)" class="frm-field required sect">
-            <option value="null"><%=t "product.one" %></option>
-            <option value="null"><%=t "product.two" %></option>
-            <option value="null"><%=t "product.three" %></option>
-            <option value="null"><%=t "product.four" %></option>
-          </select>
-          <div class="clearfix"></div>
-        </div>
-        <div class="clearfix"></div>
+      <div class="filter_product">
+        <%= render "static_pages/sort_grid" %>
       </div>
     </div>
-    <% if @products.any? %>
-      <%= render @products %>
-      <div class="col-md-12 pagination-grid text-center">
-        <%= will_paginate @products %>
-      </div>
-    <% else %>
-      <h3><%= t "product.empty" %></h3>
-    <% end %>
+    <%= render "static_pages/list_of_product"%>
   </div>
 </div>

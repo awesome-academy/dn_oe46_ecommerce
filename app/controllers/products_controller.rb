@@ -14,14 +14,6 @@ class ProductsController < ApplicationController
 
   private
 
-  def find_product
-    @product = Product.find_by(id: params[:id])
-    return if @product
-
-    flash[:danger] = t "product.not_found"
-    redirect_to root_path
-  end
-
   def find_category
     @category = Category.find_by(id: params[:category_id])
     return if @category

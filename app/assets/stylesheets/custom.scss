@@ -1072,184 +1072,6 @@ label.checkbox {
   margin: 34px 15px 0 0;
 }
 
-/*-- //single-page --*/
-/*-- check out --*/
-.checkout{
-	padding:90px 0;
-}
-
-.checkout h3 {
-  color: #000;
-  text-align: center;
-  font-size: 26px;
-	margin:0 0 3em;
-	text-transform:uppercase;
-}
-.checkout h3 span{
-	color:#d8703f;
-}
-table.timetable_sub {
-	width:100%;
-	margin:0 auto;
-}
-.timetable_sub thead {
-  background: #004284;
-}
-.timetable_sub th{
-  background: #FDA30E;
-  color: #fff !important;
-  text-transform: capitalize;
-  font-size: 13px;
-  border-right: 1px solid #CDCDCD;
-}
-.timetable_sub th {
-  text-align: center;
-  padding: 7px;
-  font-size: 17px;
-  color: #212121;
-}
- .timetable_sub td {
-  text-align: center;
-  padding: 7px;
-  font-size: 14px;
-  color: #000;
-}
-.timetable_sub td {
-	border:1px solid #CDCDCD;
-}
-td.invert-image a img {
-  width:30%;
-  margin: 0 auto;
-}
-.rem{
-	position:relative;
-}
-.close1,.close2,.close3,.close4 {
-  background: url('../images/close_1.png') no-repeat 0px 0px;
-  cursor: pointer;
-  width: 28px;
-  height: 28px;
-  position: absolute;
-  right: 42px;
-  top: -13px;
-  -webkit-transition: color 0.2s ease-in-out;
-  -moz-transition: color 0.2s ease-in-out;
-  -o-transition: color 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out;
-}
-/*-- quantity-starts --*/
- .value-minus,
-.value-plus{
-  height: 40px;
-  line-height: 24px;
-  width: 40px;
-  margin-right: 3px;
-  display: inline-block;
-  cursor: pointer;
-  position: relative;
-  font-size: 18px;
-  color: #fff;
-  text-align: center;
-	border:1px solid #b2b2b2;
-	vertical-align: bottom;
-}
-.quantity-select .entry.value-minus:before,
-.quantity-select .entry.value-plus:before{
-	content: "";
-	width: 13px;
-	height: 2px;
-	background: #FDA30E;
-	left: 50%;
-	margin-left: -7px;
-	top: 50%;
-	margin-top: -0.5px;
-	position: absolute;
-}
-.quantity-select .entry.value-plus:after{
-	content: "";
-	height: 13px;
-	width: 2px;
-	background: #FDA30E;
-	left: 50%;
-	margin-left: -1.4px;
-  top: 50%;
-  margin-top: -6.2px;
-	position: absolute;
-}
-.value  {
-	cursor: default;
-  width: 40px;
-  height: 40px;
-  padding: 8px 0px;
-  color: #000000;
-  line-height: 24px;
-  border: 1px solid #B2B2B2;
-  text-align: center;
-  display: inline-block;
-  margin-right: 3px;
-}
-.quantity-select .entry.value-minus:hover,
- .quantity-select .entry.value-plus:hover{
-	background: #E5E5E5;
-}
-
-.quantity-select .entry.value-minus{
-  margin-left: 0;
-}
-/*-- quantity-end --*/
-.checkout-left-basket h4{
-	padding: 1em;
-  background:#FDA30E;
-  font-size: 1.1em;
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0 0 1em;
-}
-.checkout-left {
-    margin: 2em 0 0;
-}
-.checkout-left-basket ul li{
-	list-style-type:none;
-	margin-bottom:1em;
-	font-size:14px;
-	color:#999;
-}
-.checkout-left-basket {
-  float: right;
-  width: 25%;
-  border: 1px solid #ccc;
-}
-.checkout-right-basket{
-	float: left;
-    margin: 8em 0 0 0em;
-}
-.checkout-left-basket ul li span {
-    float: right;
-}
-.checkout-left-basket ul {
-    padding: 4px 25px;
-}
-.checkout-left-basket ul li:nth-child(5) {
-    border-top: 1px solid #ccc;
-    padding: 20px 0 0;
-}
-.checkout-right-basket a{
-	padding:10px 30px;
-	color:#fff;
-	font-size:1em;
-	background:#212121;
-	text-decoration:none;
-}
-.checkout-right-basket a:hover{
-	background:#FDA30E;
-}
-.checkout-right-basket a span {
-    left: -.5em;
-    top: 0.1em;
-}
-/*-- //check out --*/
-
 /*-- single-page --*/
 .single {
   padding: 90px 0;
@@ -1478,3 +1300,103 @@ opacity : 1;
 }
 /*-- //Ratings --*/
 /*-- //single-page --*/
+/*
+** Style Simple Ecommerce Theme for Bootstrap 4
+** Created by T-PHP https://t-php.fr/43-theme-ecommerce-bootstrap-4.html
+*/
+.bloc_left_price {
+  color: #c01508;
+  text-align: center;
+  font-weight: bold;
+  font-size: 150%;
+}
+.category_block li:hover {
+  background-color: #007bff;
+}
+.category_block li:hover a {
+  color: #ffffff;
+}
+.category_block li a {
+  color: #343a40;
+}
+.add_to_cart_block .price {
+  color: #c01508;
+  text-align: center;
+  font-weight: bold;
+  font-size: 200%;
+  margin-bottom: 0;
+}
+.add_to_cart_block .price_discounted {
+  color: #343a40;
+  text-align: center;
+  text-decoration: line-through;
+  font-size: 140%;
+}
+.product_rassurance {
+  padding: 10px;
+  margin-top: 15px;
+  background: #ffffff;
+  border: 1px solid #6c757d;
+  color: #6c757d;
+}
+.product_rassurance .list-inline {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+.product_rassurance .list-inline li:hover {
+  color: #343a40;
+}
+.reviews_product .fa-star {
+  color: gold;
+}
+.page_cart{
+  font-size: 20px;
+}
+.quantity_cart{
+  width: 10%;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Calibri:400,300,700);
+
+body {
+    background-color: #eee;
+    font-family: 'Calibri', sans-serif !important
+}
+
+
+.card {
+    margin-bottom: 30px;
+    border: 0;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    letter-spacing: .5px;
+    border-radius: 8px;
+    -webkit-box-shadow: 1px 5px 24px 0 rgba(68, 102, 242, .05);
+    box-shadow: 1px 5px 24px 0 rgba(68, 102, 242, .05)
+}
+
+.card .card-header {
+    background-color: #fff;
+    border-bottom: none;
+    padding: 24px;
+    border-bottom: 1px solid #f6f7fb;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px
+}
+
+.card-header:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0
+}
+
+.card .card-body {
+    padding: 30px;
+    background-color: transparent
+}
+
+.btn-primary,
+.btn-primary.disabled,
+.btn-primary:disabled {
+    background-color: #4466f2 !important;
+    border-color: #4466f2 !important
+}

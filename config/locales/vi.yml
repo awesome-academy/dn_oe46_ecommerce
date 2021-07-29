@@ -1,5 +1,13 @@
 vi:
+  cart:
+    add_success: "Sản phẩm đã được thêm vào giỏ hàng"
+    update_quantity: "Sản phẩm đã được cập nhật số lượng trong giỏ hàng"
   product:
+    total_price: "Tổng tiền"
+    unit_price: "Giá"
+    total_price: "Tổng giá"
+    quantity: "Số lượng"
+    title: "Product"
     empty: "Chưa có sản phẩm nào"
     price: "Giá"
     one: 0-$10
@@ -11,6 +19,7 @@ vi:
     list: "Danh sách sản phẩm"
     not_valid: "Sản phẩm không hợp lệ hoặc chưa được kích hoạt."
     not_found: "Không tìm thấy sản phẩm này"
+    out_stock: "Xin lỗi sản phẩm đã hết hàng"
   category:
     name: "Danh mục"
     empty: "Chưa có danh muc  nào"
@@ -18,6 +27,9 @@ vi:
   order:
     not_valid: "Đơn hàng không hợp lê."
   page:
+    continue_shopping: "Tiếp tục mua hàng"
+    checkout: "Thanh toán"
+    available: "Còn hàng"
     view: "Chi tiết"
     new: "Mới"
     default: "Mặc định"

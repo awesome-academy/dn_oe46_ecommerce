@@ -1,12 +1,15 @@
 vi:
   cart:
+    your_cart: "Giỏ hàng của bạn"
     delete_success: "Sản phẫm đã được xóa khỏi giỏ hàng"
     empty: "Giỏ hàng đang rỗng "
     add_something: "Thêm vào giỏ hàng để mua sắm vui hơn :)"
     add_success: "Sản phẩm đã được thêm vào giỏ hàng"
     update_quantity: "Sản phẩm đã được cập nhật số lượng trong giỏ hàng"
   product:
-   negative_quantity: "Không thể thêm vào giỏ hàng với số lương âm"
+    negative_quantity: "Không thể thêm vào giỏ hàng với số lương âm"
+    please_update_quantity: "Vui lòng cập nhật lại số lượng của sản phẩm %{name} trong giỏ hàng trước khi thanh toán"
+    name_quantity: "%{name} x %{quantity}"
     total_price: "Tổng tiền"
     unit_price: "Giá"
     total_price: "Tổng giá"
@@ -29,8 +32,11 @@ vi:
     empty: "Chưa có danh muc  nào"
     not_found: "Không tìm thấy danh mục"
   order:
+    place_success: "Bạn đã đặt hàng thành công"
+    place_order: "Đặt hàng"
     not_valid: "Đơn hàng không hợp lê."
   page:
+    checkout: "Thanh toán"
     confirm : "Bạn chắc chắn chứ"
     continue_shopping: "Tiếp tục mua hàng"
     checkout: "Thanh toán"

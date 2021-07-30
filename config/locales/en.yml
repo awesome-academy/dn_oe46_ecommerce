@@ -1,5 +1,6 @@
 en:
   cart:
+    your_cart: "Your cart"
     delete_success: "The product has been removed from the cart"
     empty: "Your Cart is Empty"
     add_something: "Add something to make me happy :)"
@@ -7,6 +8,8 @@ en:
     update_quantity: "The product has been updated to the quantity in the cart"
   product:
     negative_quantity: "Cannot add to cart with negative quantity"
+    please_update_quantity: "Please update the quantity of %{name} in the cart"
+    name_quantity: "%{name} x %{quantity}"
     total_price: "Total"
     unit_price: "Unit price"
     total_price: "Total price"
@@ -29,8 +32,11 @@ en:
     empty: "No categories yet"
     not_found: "Not found category. Try again!!!"
   order:
+    place_success: "You have successfully placed your order"
+    place_order: "Place Order"
     not_valid: "is not a valid order."
   page:
+    checkout: "Checkout"
     confirm : "Are you sure"
     continue_shopping: "Continue Shopping"
     checkout: "Checkout"

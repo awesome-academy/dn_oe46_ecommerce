@@ -8,7 +8,7 @@ class Order < ApplicationRecord
   belongs_to :user
   has_many :order_items, dependent: :destroy
   has_many :products, through: :order_items
-  validates :fullname, presence: true,
+  validates :full_name, presence: true,
                        length: {maximum: Settings.validate.normal_length}
   validates :email, presence: true,
                     length: {maximum: Settings.validate.normal_length},

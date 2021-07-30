@@ -17,3 +17,4 @@ filter_price_low: 5
 filter_price_normal: 6
 filter_price_medium: 7
 filter_price_hight: 8
+list_id: [1,2,3,4]

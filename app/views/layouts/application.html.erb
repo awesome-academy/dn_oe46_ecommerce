@@ -8,9 +8,9 @@
 
   <body>
     <%= render "layouts/user_header" %>
-    <% flash.each do |message_type, message| %>
-      <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-    <% end %>
+    <div id="flash_messages">
+      <%= render "layouts/flash_messages" %>
+    </div>
     <%= yield %>
     <%= render "layouts/user_footer" %>
   </body>

@@ -3,9 +3,7 @@ class OrderItem < ApplicationRecord
   belongs_to :order
   validates :quantity, presence: true, numericality:
                       {only_integer: true, greater_than: Settings.validate.zero}
-  validate :product_present
-  validate :order_present
-  validate :enough_quantity
+  validate :enough_quantity, if: :product_present?
   before_save :finalize
   after_create :change_product_quantity
 
@@ -24,7 +22,7 @@ class OrderItem < ApplicationRecord
   private
 
   def change_product_quantity
-    product.update(quantity: product.quantity - quantity)
+    product.update!(quantity: product.quantity - quantity)
   end
 
   def finalize
@@ -32,21 +30,14 @@ class OrderItem < ApplicationRecord
     self.total_price = total_price
   end
 
-  def product_present
-    return if product.present?
-
-    errors.add(:product, t("product.not_valid"))
-  end
-
-  def order_present
-    return if order.present?
-
-    errors.add(:order, t("order.not_valid"))
+  def product_present?
+    product.present?
   end
 
   def enough_quantity
     return if product.quantity >= quantity
 
-    errors.add(:base, I18n.t("order_item.not_enough_quantity"))
+    errors.add(:base, I18n.t("product.please_update_quantity",
+                             name: product.name))
   end
 end

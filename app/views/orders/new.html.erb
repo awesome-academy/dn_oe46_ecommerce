@@ -1,17 +1,19 @@
   <% provide(:title, t("page.checkout")) %>
 
 <div class="container user_checkout">
-  <div class="row">
+  <h3 class="checkout"><%= link_to t("page.home_checkout"), root_path %> <%= link_to t("page.cart_checkout"), carts_path %> <%= t "page.checkout" %></h3>
+  <div class="row mt-5">
     <div class="col-md-4 order-md-2 mb-4">
       <h4 class="d-flex justify-content-between align-items-center mb-3">
-        <span class="text-muted"><%= t "cart.your_cart" %></span>
+        <span class="text-muted"><%= link_to t("cart.your_cart"), carts_path %></span>
         <span class="badge badge-secondary badge-pill"><%= @cart_items.length %></span>
       </h4>
       <ul class="list-group mb-3">
         <% @cart_items.each do |line_item| %>
           <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <%= image_tag("d1.jpg", class: "img-responsive",width: "40px", height: "40px") %>
             <div>
-              <h6 class="my-0"><%= t("product.name_quantity", name: line_item[:product].name, quantity: line_item[:quantity])  %></h6>
+              <h6 class="my-0 product_quantity"><%= t("product.name_quantity", name: line_item[:product].name, quantity: line_item[:quantity])  %></h6>
             </div>
             <span class="text-muted"><%= number_to_currency line_total_price(line_item) %></span>
           </li>

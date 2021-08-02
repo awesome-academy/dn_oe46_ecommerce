@@ -6,7 +6,8 @@ class Product < ApplicationRecord
   validates :name, presence: true,
                    length: {maximum: Settings.validate.normal_length}
   validates :quantity, presence: true, numericality:
-                      {only_integer: true, greater_than: Settings.validate.zero}
+                      {only_integer: true,
+                       greater_than: Settings.validate.negative}
   scope :sort_desc_by_create_time, ->{order(created_at: :DESC)}
   scope :sort_by_name, ->(sort_type){order(name: sort_type)}
   scope :sort_by_price, ->(sort_type){order(price: sort_type)}

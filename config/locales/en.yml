@@ -20,7 +20,7 @@ en:
     one: 0-$10
     two: 10-$30
     three: 30-$50
-    four: Up-$10
+    four: Up-$50
     in_stock: "In stock :"
     add_cart: "Add to cart"
     list: "Product list"
@@ -36,6 +36,9 @@ en:
     place_order: "Place Order"
     not_valid: "is not a valid order."
   page:
+    cart: "Cart"
+    home_checkout: "Home > "
+    cart_checkout : "Cart > "
     checkout: "Checkout"
     confirm : "Are you sure"
     continue_shopping: "Continue Shopping"

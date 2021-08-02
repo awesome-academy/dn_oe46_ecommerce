@@ -18,7 +18,7 @@ class OrdersController < ApplicationController
       redirect_to root_path
     end
   rescue ActiveRecord::RecordInvalid
-    render :new
+    flash.empty? ? (render :new) : (redirect_to carts_path)
   end
 
   private
@@ -38,7 +38,7 @@ class OrdersController < ApplicationController
   def check_enough_quantity item
     return if item[:product].quantity >= item[:quantity]
 
-    flash.now[:warning] = t("product.please_update_quantity",
-                            name: item[:product].name)
+    flash[:warning] = t("product.please_update_quantity",
+                        name: item[:product].name)
   end
 end

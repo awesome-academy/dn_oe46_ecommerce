@@ -23,9 +23,8 @@ class OrdersController < ApplicationController
   end
 
   def index
-    @orders = Kaminari.paginate_array(current_user
-                      .orders.sort_by_created_at(:desc))
-                      .page(params[:page]).per(Settings.order.per_page)
+    @orders = current_user.orders.sort_by_created_at(:desc)
+                          .page(params[:page]).per(Settings.order.per_page)
   end
 
   def update_status

@@ -10,10 +10,10 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand -->
   <%= link_to t("page.base_title"), root_path, id: "logo", class: "navbar-brand" %>
-  <form class="form-inline form_search" action="/action_page.php">
-    <input class="form-control mr-sm-2" type="text" placeholder="Search">
-    <button class="btn btn-success" type="submit"><%= t "page.search" %></button>
-  </form>
+  <%= form_with url: search_static_pages_path, method: :get, class: "form-inline form_search" do |f| %>
+    <%= f.text_field :search, class: "form-control mr-sm-2", placeholder: t("page.search") %>
+    <%= f.submit t("page.search"), class: "btn btn-success" %>
+  <% end %>
   <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">

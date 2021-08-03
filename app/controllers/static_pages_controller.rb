@@ -1,8 +1,9 @@
 class StaticPagesController < ApplicationController
   before_action :get_list_product, only: [:sort]
   before_action :list_old_product, only: [:sort], if: :check_old_product?
+  before_action :find_categories, only: [:home, :search, :sort]
+
   def home
-    @categories = Category.parents
     @products = Product.sort_desc_by_create_time
                        .page(params[:page]).per(Settings.product.per_page)
     @list_trend_product = OrderItem.get_trending_product
@@ -10,13 +11,18 @@ class StaticPagesController < ApplicationController
 
   def sort
     @old_sort = params[:sort]
-    @categories = Category.parents
     @products = list_product(params[:sort]).page(params[:page])
                                            .per(Settings.product.per_page)
     respond_to do |format|
       format.html{render "static_pages/home"}
       format.js
     end
+  end
+
+  def search
+    @products = Product.search_by_name(params[:search]).page(params[:page])
+                       .per(Settings.product.per_page)
+    render "static_pages/home"
   end
 
   private
@@ -56,5 +62,9 @@ class StaticPagesController < ApplicationController
     params[:old_sort].present? &&
       !(Settings.list_id.to_a.include?(params[:sort].to_i) &&
         Settings.list_id.to_a.include?(params[:old_sort].to_i))
+  end
+
+  def find_categories
+    @categories = Category.parents
   end
 end

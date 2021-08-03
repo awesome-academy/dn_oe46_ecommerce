@@ -3,14 +3,14 @@
     <h6><%= t "page.sort_by" %></h6>
     <%= select_tag(:sort, options_for_select([[t("page.default"), 0], [t("page.sort.name_asc"), 1], [t("page.sort.name_desc"), 2],
                    [t("page.sort.price_asc"), 3], [t("page.sort.price_desc"), 4]]),
-                   data: {url: sort_path(list_product_id: @products.pluck(:id), old_sort: @old_sort), remote: true, method: :get, id: "country1", class: "frm-field required sect"}, prompt: "Sort by")
+                   data: {url: sort_static_pages_path(list_product_id: @products.pluck(:id), old_sort: @old_sort), remote: true, method: :get, id: "country1", class: "frm-field required sect"}, prompt: "Sort by")
     %>
     <div class="clearfix"></div>
   </div>
   <div class="sorting">
     <h6><%= t "product.price" %></h6>
     <%= select_tag(:sort, options_for_select([[t("product.one"), 5], [t("product.two"), 6],[t("product.three"), 7], [t("product.four"), 8]]),
-                   data: {url: sort_path(list_product_id: @products.pluck(:id), old_sort: @old_sort), remote: true, method: :get, id: "country1", class: "frm-field required sect"}, prompt: "Default")
+                   data: {url: sort_static_pages_path(list_product_id: @products.pluck(:id), old_sort: @old_sort), remote: true, method: :get, id: "country1", class: "frm-field required sect"}, prompt: "Default")
     %>
     <div class="clearfix"></div>
   </div>

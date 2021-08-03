@@ -1,4 +1,7 @@
 en:
+  time:
+    formats:
+      own: "%H:%M:%S, %d-%m-%Y"
   cart:
     your_cart: "Your cart"
     delete_success: "The product has been removed from the cart"
@@ -7,6 +10,9 @@ en:
     add_success: "The product has been added to cart"
     update_quantity: "The product has been updated to the quantity in the cart"
   product:
+    name: "Product Name"
+    image: "Product Image"
+    created_at: Created At
     negative_quantity: "Cannot add to cart with negative quantity"
     please_update_quantity: "Please update the quantity of %{name} in the cart"
     name_quantity: "%{name} x %{quantity}"
@@ -32,10 +38,20 @@ en:
     empty: "No categories yet"
     not_found: "Not found category. Try again!!!"
   order:
+    not_found: "Not found order. Try again!!!"
+    no_order: "You don't have any orders yet"
+    cancel_error: "Can't cancel order"
+    t_cancel: "Cancel"
+    status: "Status"
+    cancel: "You have successfully cancel orders"
     place_success: "You have successfully placed your order"
     place_order: "Place Order"
     not_valid: "is not a valid order."
   page:
+    order: "Order"
+    order_link: "Order > "
+    order_detail: "Order details"
+    address: "Address"
     cart: "Cart"
     home_checkout: "Home > "
     cart_checkout : "Cart > "
@@ -80,6 +96,7 @@ en:
     update_success: "Update password sucess"
     has_expired: "Password reset has expired"
   email:
+    title: "Email"
     not_valid: "Email not valid . Try again"
     not_found: "Not found email. Try again!!!"
     placeholder: "Enter email"
@@ -89,6 +106,7 @@ en:
                     If you did not request your password to be reset, please ignore this email and
                     your password will stay as it is."
   user:
+    mphone: "Phone"
     title:
       edit: "Edit profile"
       new: "Sign up"
@@ -133,3 +151,5 @@ en:
     phone: "0877654121"
     flick: "Flickr Posts"
     copy: "&copy 2021 Smart Shop. All rights reserved | Design by RubyTeam"
+  order_item:
+    no_order: "You don't have any order items yet"

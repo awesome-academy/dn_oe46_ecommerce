@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
-  before_action :logged_in_user, only: [:new, :create]
+  before_action :logged_in_user, only: [:new, :create, :index, :update_status]
+  before_action :find_order, only: [:update_status]
 
   def new
     @order = current_user.orders.build
@@ -21,7 +22,30 @@ class OrdersController < ApplicationController
     flash.empty? ? (render :new) : (redirect_to carts_path)
   end
 
+  def index
+    @orders = Kaminari.paginate_array(current_user
+                      .orders.sort_by_created_at(:desc))
+                      .page(params[:page]).per(Settings.order.per_page)
+  end
+
+  def update_status
+    if @order.update(status: params[:status])
+      flash[:info] = t "order.cancel"
+    else
+      flash[:danger] = t "order.cancel_error"
+    end
+    redirect_to orders_path(page: params[:page])
+  end
+
   private
+
+  def find_order
+    @order = Order.find_by(id: params[:id])
+    return if @order
+
+    flash[:danger] = t "order.not_found"
+    redirect_to orders_path
+  end
 
   def order_params
     params.require(:order).permit(:full_name, :email, :phone, :address)

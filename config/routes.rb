@@ -16,6 +16,11 @@ Rails.application.routes.draw do
     end
     resources :products, only: [:show]
     resources :sessions, only: [:new, :create, :destroy]
-    resources :orders, only: [:new, :create]
+    resources :orders, only: [:new, :create, :index] do
+      member do
+        put :update_status
+      end
+      resources :order_items, only: [:index]
+    end
   end
 end

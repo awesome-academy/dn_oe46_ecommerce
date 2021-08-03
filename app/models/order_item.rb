@@ -1,8 +1,9 @@
 class OrderItem < ApplicationRecord
   belongs_to :product
   belongs_to :order
-  validates :quantity, presence: true, numericality:
-                      {only_integer: true, greater_than: Settings.validate.zero}
+  validates :quantity, presence: true,
+                       numericality: {only_integer: true,
+                                      greater_than: Settings.validate.negative}
   validate :enough_quantity, if: :product_present?
   before_save :finalize
   after_create :change_product_quantity

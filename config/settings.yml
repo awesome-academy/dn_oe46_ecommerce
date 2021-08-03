@@ -10,6 +10,7 @@ validate:
 product:
   per_page: 15
   expensive: 50
+  trend_size: 8
 order:
   per_page: 10
 order_item:

@@ -8,7 +8,7 @@
           <%= link_to t("page.view"), product_path(product), method: :get, class: "link-product-add-cart"%>
         </div>
       </div>
-      <span class="product-new-top"><%= t "page.new" %></span>
+      <span class="product-new-top <%= tag %>"><%= tag %></span>
     </div>
     <div class="item-info-product ">
       <h4><%= link_to product.name, product_path(product), method: :get %></h4>

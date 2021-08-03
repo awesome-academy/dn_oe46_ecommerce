@@ -20,6 +20,15 @@ class OrderItem < ApplicationRecord
     unit_price * quantity
   end
 
+  def self.get_trending_product
+    order_items_by_desc_quantity = OrderItem.group(:product_id)
+                                            .sum(:quantity)
+                                            .sort_by{|_, v| -v.to_i}
+                                            .take(Settings.product.trend_size)
+    list_trend_id = Hash[order_items_by_desc_quantity].keys
+    Product.list_by_ids(list_trend_id)
+  end
+
   private
 
   def change_product_quantity

@@ -19,7 +19,11 @@ Rails.application.routes.draw do
     resources :categories do
       resources :products, only: [:index]
     end
-    resources :products, only: [:show]
+    resources :products, only: [:show] do
+      collection do
+        get :recently
+      end
+    end
     resources :sessions, only: [:new, :create, :destroy]
     resources :orders, only: [:new, :create, :index] do
       member do

@@ -5,13 +5,13 @@
       <%= image_tag("a8.png", class: "pro-image-back") %>
       <div class="men-cart-pro">
         <div class="inner-men-cart-pro">
-          <%= link_to t("page.view"), product_path(product), method: :get, class: "link-product-add-cart"%>
+          <%= link_to t("page.view"), product_path(product), class: "link-product-add-cart"%>
         </div>
       </div>
       <span class="product-new-top <%= tag %>"><%= tag %></span>
     </div>
     <div class="item-info-product ">
-      <h4><%= link_to product.name, product_path(product), method: :get %></h4>
+      <h4><%= link_to product.name, product_path(product) %></h4>
       <div class="info-product-price">
         <span class="item_price"><%= number_to_currency product.price %></span>
       </div>

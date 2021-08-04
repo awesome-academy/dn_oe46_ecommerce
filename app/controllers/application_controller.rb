@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
   include CartsHelper
+  include ProductsHelper
   before_action :set_locale
 
   private

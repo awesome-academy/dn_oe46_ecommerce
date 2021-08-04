@@ -1,0 +1,13 @@
+<% if @products.present? %>
+  <div class="container list_trend">
+    <hr>
+    <h4 class="text-center hot_trend"><%= t "page.hot_trend" %><h4>
+    <div class="list_of_product">
+      <%= render @products, tag: :recently %>
+    </div>
+  </div>
+<% else %>
+  <div class="container" >
+    <h3 class="text-center"><%= t "product.empty" %></h3>
+  </div>
+<% end %>

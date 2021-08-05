@@ -1,0 +1,14 @@
+<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark mb-0">
+    <!-- Navbar Brand-->
+  <%= link_to t("page.base_title"), root_path, id: "logo", class: "navbar-brand" %>
+  <!-- Navbar Search-->
+  <!-- Navbar-->
+  <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4 user">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+        <li><%= link_to t("user.logout"), session_path(current_user), method: :delete, class: "dropdown-item"%></li>
+      </ul>
+    </li>
+  </ul>
+</nav>

@@ -39,6 +39,11 @@ en:
     empty: "No categories yet"
     not_found: "Not found category. Try again!!!"
   order:
+    invalid_status: "Status not valid!!! Try agian"
+    approve: "Approve"
+    deny: "Deny"
+    status_success: "Order status update successful"
+    status_error: "Order status update failed"
     not_found: "Not found order. Try again!!!"
     no_order: "You don't have any orders yet"
     cancel_error: "Can't cancel order"
@@ -108,6 +113,7 @@ en:
                     If you did not request your password to be reset, please ignore this email and
                     your password will stay as it is."
   user:
+    manage: "Manage"
     mphone: "Phone"
     title:
       edit: "Edit profile"
@@ -155,3 +161,15 @@ en:
     copy: "&copy 2021 Smart Shop. All rights reserved | Design by RubyTeam"
   order_item:
     no_order: "You don't have any order items yet"
+  admin:
+    core: "Core"
+    dashboard: "Dashboard"
+    category: "Category"
+    new: "New"
+    details: "Details"
+    product: "Product"
+    order: "Order"
+    user: "User"
+    log_in: "Logged in as:"
+    bootstrap: "Start Bootstrap"
+    order_item: "Order Item"

@@ -39,7 +39,9 @@
         </a>
         <div class="dropdown-menu drop_head aria-labelledby="dropdownMenuLink"">
           <%= link_to t("user.orders"), orders_path, class: "dropdown-item"%>
-          <%= link_to t("user.setting"), edit_user_path(current_user), class: "dropdown-item"%>
+          <% if check_admin? %>
+            <%= link_to t("user.manage"), admin_orders_path, class: "dropdown-item"%>
+          <% end %>
           <%= link_to t("user.logout"), session_path(current_user), method: :delete, class: "dropdown-item"%>
         </div>
       </li>

@@ -31,5 +31,13 @@ Rails.application.routes.draw do
       end
       resources :order_items, only: [:index]
     end
+    namespace :admin do
+      resources :orders, only: [:index] do
+        member do
+          put :update_status
+          get :show
+        end
+      end
+    end
   end
 end

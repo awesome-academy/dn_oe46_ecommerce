@@ -19,4 +19,10 @@ class Order < ApplicationRecord
   def total_price
     order_items.pluck(:total_price).sum
   end
+
+  def rollback_quantity
+    order_items.each do |item|
+      item.product.update!(quantity: item.product.quantity + item.quantity)
+    end
+  end
 end

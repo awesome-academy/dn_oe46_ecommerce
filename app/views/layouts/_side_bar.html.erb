@@ -26,8 +26,8 @@
             </a>
             <div class="collapse" id="collapseProducts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
               <nav class="sb-sidenav-menu-nested nav">
-                <a class="nav-link" href="layout-static.html"><%= t "admin.new" %></a>
-                <a class="nav-link" href="layout-sidenav-light.html"><%= t "admin.details" %></a>
+                <%= link_to t("admin.new"), new_admin_product_path, class: "nav-link" %>
+                <%= link_to t("admin.details"), admin_products_path, class: "nav-link" %>
               </nav>
             </div>
             <%= link_to admin_orders_path, class: "nav-link" do %>

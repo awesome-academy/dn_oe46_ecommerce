@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 2021_07_24_100746) do
     t.integer "quantity"
     t.text "description"
     t.bigint "category_id", null: false
+    t.timestamp "delete_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["category_id"], name: "index_products_on_category_id"

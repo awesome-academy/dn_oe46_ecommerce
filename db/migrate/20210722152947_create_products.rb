@@ -7,6 +7,7 @@ class CreateProducts < ActiveRecord::Migration[6.1]
       t.integer :quantity
       t.text :description
       t.references :category, null: false, foreign_key: true
+      t.timestamp :delete_at
 
       t.timestamps
     end

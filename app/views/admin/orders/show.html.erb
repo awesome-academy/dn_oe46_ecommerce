@@ -24,7 +24,7 @@
             <% @order_items.each_with_index do |item, index| %>
               <tr>
                 <th scope="row"><%= current_index  @order_items.current_page, Settings.per_page, index %></th>
-                <td><%= image_tag("d1.jpg", class: "img-responsive", width: 40, height: 40) %></td>
+                <td><%= image_tag(item.product.images.first, class: "img-responsive", width: 40, height: 40) if item.product.images.attached? %></td>
                 <td><%= item.product.name %></td>
                 <td><%= number_to_currency item.unit_price %></td>
                 <td><%= item.quantity %></td>

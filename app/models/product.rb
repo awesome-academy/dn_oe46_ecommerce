@@ -10,7 +10,8 @@ class Product < ApplicationRecord
                        greater_than: Settings.validate.negative}
   validates :price, presence: true, numericality:
                        {greater_than: Settings.validate.zero}
-  validates :images, content_type: {in: ["image/jpg", "image/png"],
+  validates :images, content_type: {in: ["image/jpg", "image/jpeg",
+                                    "image/png"],
                                     message: I18n.t("image_format")},
                      size:         {less_than: 5.megabytes,
                                     message: I18n.t("maximum_size")}
@@ -28,6 +29,10 @@ class Product < ApplicationRecord
 
   def check_enought_quantity? quantity_params
     quantity_params.positive? && quantity >= quantity_params
+  end
+
+  def is_active?
+    delete_at.nil?
   end
 
   def handle_order

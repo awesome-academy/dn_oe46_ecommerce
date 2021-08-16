@@ -1,8 +1,8 @@
 <div class="col-md-3 product-men">
   <div class="men-pro-item simpleCart_shelfItem">
     <div class="men-thumb-item">
-      <%= image_tag("a8.png", class: "pro-image-front") %>
-      <%= image_tag("a8.png", class: "pro-image-back") %>
+      <%= image_tag(product.images.first, class: "pro-image-front") if product.images.attached? %>
+      <%= image_tag(product.images.first, class: "pro-image-back") if product.images.attached? %>
       <div class="men-cart-pro">
         <div class="inner-men-cart-pro">
           <%= link_to t("page.view"), product_path(product), class: "link-product-add-cart"%>

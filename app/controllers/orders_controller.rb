@@ -35,8 +35,9 @@ class OrdersController < ApplicationController
       flash[:info] = t "order.cancel"
     rescue ActiveRecord::RecordInvalid
       flash[:danger] = t "order.cancel_error"
+    ensure
+      redirect_to orders_path(page: params[:page])
     end
-    redirect_to orders_path(page: params[:page])
   end
 
   private

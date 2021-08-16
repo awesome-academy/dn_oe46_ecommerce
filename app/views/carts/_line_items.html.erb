@@ -18,7 +18,7 @@
           <tbody>
             <% @cart_items.each do |line_item|%>
               <tr>
-                <td><%= link_to image_tag("d1.jpg", class: "img-responsive",width: "70px", height: "70px"), "#" %></td>
+                <td><%= image_tag(line_item[:product].images.first, class: "img-responsive", width: "70px", height: "70px") if line_item[:product].images.attached? %></td>
                 <td><%= line_item[:product].name %></td>
                 <td><%= t "product.in_stock" %> <%= line_item[:product].quantity %></td>
                 <%= form_with do |f| %>

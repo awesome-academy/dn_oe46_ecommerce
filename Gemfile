@@ -43,6 +43,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
   gem "shoulda-matchers", "~> 5.0"
+  gem "database_cleaner"
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]

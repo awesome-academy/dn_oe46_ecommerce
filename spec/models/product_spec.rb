@@ -74,10 +74,8 @@ RSpec.describe Product, type: :model do
   describe "#handle_order" do
     it "delete order and order item when update product delete_at field" do
       user = FactoryBot.create(:user)
-      order = FactoryBot.build(:order, user_id: user.id)
-      order_item = order.order_items.build(product_id: product_one.id, quantity: 2)
-      order.save!
-      order_item.product.update!(delete_at: Time.zone.now)
+      order = FactoryBot.create(:order, user_id: user.id)
+      order.order_items.first.product.update!(delete_at: Time.zone.now)
       expect(Order.count).to eq(0)
     end
   end

@@ -1,14 +1,9 @@
 require "rails_helper"
 
 RSpec.describe Order, type: :model do
-  let!(:category) {FactoryBot.create(:category)}
-  let!(:product) {FactoryBot.create(:product, category_id: category.id, name: "a", price: 20)}
   let!(:user) {FactoryBot.create(:user)}
-  let!(:order1) {user.orders.build(FactoryBot.build(:order).as_json)}
-  let!(:order2) {user.orders.build(FactoryBot.build(:order).as_json)}
-  let!(:order_item1) {order1.order_items.build(product_id: product.id, quantity: 5)}
-  let!(:order_item2) {order2.order_items.build(product_id: product.id, quantity: 10)}
-  let!(:save_user) {user.save!}
+  let!(:order1) {FactoryBot.create(:order, user_id: user.id)}
+  let!(:order2) {FactoryBot.create(:order, user_id: user.id)}
 
   describe "associations" do
     it { should have_many(:order_items) }
@@ -41,19 +36,19 @@ RSpec.describe Order, type: :model do
   end
 
   describe "#total_price" do
-    it { expect(order1.total_price).to eq(order_item1.total_price) }
+    it { expect(order1.total_price).to eq(order1.order_items.first.total_price) }
   end
 
   describe "#rollback_quantity" do
     it "update product quantity after cancel or deny order" do
       order1.rollback_quantity
-      expect(order_item1.product.quantity).to eq(product.quantity)
+      expect(order1.products.first.quantity).to eq(20)
     end
   end
 
   describe "#check_order_item" do
     it "false while create order have no order items" do
-      order = FactoryBot.build(:order, user_id: user.id).save
+      order = FactoryBot.build(:order_with_no_order_item, user_id: user.id).save
       expect(order).to eq(false)
     end
   end

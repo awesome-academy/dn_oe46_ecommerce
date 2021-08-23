@@ -8,18 +8,19 @@
       </ol>
     </div>
     <div class="row">
+      <%= render "admin/orders/search_form" %>
       <% if @orders.present? %>
         <table class="table table-hover table-bordered">
           <thead class="thead-dark">
             <tr>
               <th scope="col"></th>
-              <th scope="col" class="text-center"><%= t "product.created_at" %></th>
-              <th scope="col" class="text-center"><%= t "user.full_name" %></th>
-              <th scope="col" class="text-center"><%= t "page.address" %></th>
-              <th scope="col" class="text-center"><%= t "email.title" %></th>
+              <th scope="col" class="text-center"><%= sort_link(@q, :created_at, t("product.created_at"), default_order: :desc) %></th>
+              <th scope="col" class="text-center"><%= sort_link(@q, :full_name, t("user.full_name")) %></th>
+              <th scope="col" class="text-center"><%= sort_link(@q, :address, t("page.address")) %></th>
+              <th scope="col" class="text-center"><%= sort_link(@q, :email, t("email.title")) %></th>
               <th scope="col" class="text-center"><%= t "user.mphone" %></th>
               <th scope="col" class="text-center"><%= t "product.price" %></th>
-              <th scope="col" class="text-center"><%= t "order.status" %></th>
+              <th scope="col" class="text-center"><%= sort_link(@q, :status, t("order.status")) %></th>
             </tr>
           </thead>
           <tbody>

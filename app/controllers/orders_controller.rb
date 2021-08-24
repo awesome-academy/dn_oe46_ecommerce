@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :logged_in_user, only: [:new, :create, :index, :update_status]
+  before_action :authenticate_user!
   before_action :find_order, only: [:update_status]
   before_action :check_status?, only: [:update_status]
 

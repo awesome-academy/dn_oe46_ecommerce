@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"
 
+    devise_for :users
     resources :static_pages, only: [:home] do
       collection do
         get :sort
@@ -15,7 +16,6 @@ Rails.application.routes.draw do
         delete "delete_from_cart/:id", to: "carts#delete_from_cart", as: "delete_from"
       end
     end
-    resources :users
     resources :categories do
       resources :products, only: [:index]
     end
@@ -24,7 +24,6 @@ Rails.application.routes.draw do
         get :recently
       end
     end
-    resources :sessions, only: [:new, :create, :destroy]
     resources :orders, only: [:new, :create, :index] do
       member do
         put :update_status

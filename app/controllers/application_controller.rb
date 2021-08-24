@@ -1,11 +1,22 @@
 class ApplicationController < ActionController::Base
-  include SessionsHelper
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
   include CartsHelper
   include ProductsHelper
   include UsersHelper
   before_action :set_locale
 
   private
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up) do |user|
+      user.permit(:full_name, :email, :password, :phone, :address)
+    end
+    devise_parameter_sanitizer.permit(:account_update) do |user|
+      user.permit(:full_name, :email, :password,
+                  :current_password, :phone, :address)
+    end
+  end
 
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale

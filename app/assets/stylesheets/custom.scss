@@ -1,6 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.alert-notice {
+  background-color: yellow;
+}
+
+.alert-alert {
+  background-color: yellow;
+}
+
 #error_explanation {
   color: red;
   ul {

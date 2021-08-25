@@ -1,3 +1,4 @@
+=begin
 require "rails_helper"
 include SessionsHelper
 
@@ -106,3 +107,4 @@ RSpec.describe SessionsController,	type:	:controller	do
   end
 
 end
+=end

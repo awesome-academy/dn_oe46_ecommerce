@@ -1,0 +1,19 @@
+<% provide(:title, t("session.title")) %>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "container animate"}) do |f| %>
+  <div class="containerr">
+    <%= f.label :email %>
+    <%= f.email_field :email, class: "form_login", placeholder: t("email.placeholder"), required: true  %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password, class: "form_login", placeholder: t("password.placeholder"), required: true  %>
+
+    <%= f.submit t("session.title"), class: "button_login" %>
+    <% if devise_mapping.rememberable? %>
+      <%= f.label :remember_me do %>
+        <%= f.check_box :remember_me %>
+        <span><%= t "checkbox.remember" %></span>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>

@@ -1,14 +1,13 @@
 require "rails_helper"
-include SessionsHelper
 
 RSpec.shared_examples "user don't log in" do
   before {get :new}
-  it "is store forwarding_url" do
-    expect(session[:forwarding_url]).not_to be_nil
+  it "flash alert" do
+    expect(flash[:alert]).not_to be_nil
   end
 
   it "redirect to login path" do
-    expect(response).to redirect_to new_session_path
+    expect(response.redirect?).to be true
   end
 end
 
@@ -21,7 +20,7 @@ RSpec.describe OrdersController, type: :controller do
     context "success when valid attributes" do
       context "when curren cart empty" do
         before do
-          log_in user
+          sign_in user
           get :new
         end
 
@@ -37,7 +36,7 @@ RSpec.describe OrdersController, type: :controller do
       context "when curren cart not empty" do
         before do
           session[:cart] = [{product_id: product.id, quantity: 1}]
-          log_in user
+          sign_in user
           get :new
         end
 
@@ -56,7 +55,7 @@ RSpec.describe OrdersController, type: :controller do
     context "success when valid attributes" do
       before do
         session[:cart] = [{product_id: product.id, quantity: 1}]
-        log_in user
+        sign_in user
         get :create, params: {
           order: order_params
         }
@@ -86,7 +85,7 @@ RSpec.describe OrdersController, type: :controller do
     context "error when invalid product quantity" do
       before do
         session[:cart] = [{product_id: product.id, quantity: 100}]
-        log_in user
+        sign_in user
         get :create, params: {
           order: order_params
         }
@@ -112,7 +111,7 @@ RSpec.describe OrdersController, type: :controller do
     context "error when invalid order params" do
       before do
         session[:cart] = [{product_id: product.id, quantity: 1}]
-        log_in user
+        sign_in user
         get :create, params: {
           order: {
             full_name: "",
@@ -134,7 +133,7 @@ RSpec.describe OrdersController, type: :controller do
   describe "GET #index" do
     context "success when valid attributes" do
       before do
-        log_in user
+        sign_in user
         get :index
       end
 
@@ -149,7 +148,7 @@ RSpec.describe OrdersController, type: :controller do
   describe "PUT #update_status" do
     context "fail when id order not found" do
       before do
-        log_in user
+        sign_in user
         put :update_status, params: {
           id: -10
         }
@@ -170,7 +169,7 @@ RSpec.describe OrdersController, type: :controller do
 
     context "fail when invalid status params" do
       before do
-        log_in user
+        sign_in user
         put :update_status, params: {
           id: order.id,
           status: "no status"
@@ -188,7 +187,7 @@ RSpec.describe OrdersController, type: :controller do
 
     context "success when valid status attribute" do
       before do
-        log_in user
+        sign_in user
         put :update_status, params: {
           id: order.id,
           status: :cancel

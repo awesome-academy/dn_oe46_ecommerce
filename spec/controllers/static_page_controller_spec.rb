@@ -1,5 +1,4 @@
 require "rails_helper"
-include SessionsHelper
 
 RSpec.describe StaticPagesController,	type:	:controller	do
   let!(:product) {FactoryBot.create(:product, name: "b")}

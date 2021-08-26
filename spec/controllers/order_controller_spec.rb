@@ -146,6 +146,7 @@ RSpec.describe OrdersController, type: :controller do
   end
 
   describe "PUT #update_status" do
+    before { allow_any_instance_of(CanCan::ControllerResource).to receive(:load_and_authorize_resource){ nil } }
     context "fail when id order not found" do
       before do
         sign_in user

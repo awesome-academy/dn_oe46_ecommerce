@@ -6,6 +6,14 @@ User.create!(full_name: "Tran Bao",
   role: :admin,
   phone: "0877654121")
 
+User.create!(full_name: "Tran Bao",
+  email: "tranvanbaohtv3@gmail.com",
+  password: "123456",
+  password_confirmation: "123456",
+  address: "60 Ngo Si Lien, Lien Chieu",
+  role: :user,
+  phone: "0877654121")
+
 
 women = Category.create(name: "Women")
 men = Category.create(name: "Men")

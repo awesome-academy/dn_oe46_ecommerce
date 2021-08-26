@@ -1,4 +1,5 @@
 class CartsController < ApplicationController
+  skip_load_and_authorize_resource
   before_action :find_product, :get_line_item,
                 only: [:add_to_cart, :update_to_cart, :delete_from_cart]
   before_action :get_quantity_for_add, only: [:add_to_cart]

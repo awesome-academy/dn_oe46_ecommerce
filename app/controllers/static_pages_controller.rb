@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+  skip_load_and_authorize_resource
   before_action :get_list_product, only: [:sort]
   before_action :list_old_product, only: [:sort], if: :check_old_product?
   before_action :find_categories, only: [:home, :search, :sort]
